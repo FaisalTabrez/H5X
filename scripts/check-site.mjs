@@ -15,6 +15,14 @@ for(const file of ['index.html','bug-hunt.html','hackathon.html','events.html','
   await access(path.resolve(out,url.split(/[?#]/)[0]));
  }
  const data=JSON.parse(html.match(/id="h5x-data"[^>]*>(.*?)<\/script>/s)[1]);assert(validSnapshot(data.ctftime));
+ if(file==='events.html'){
+  for(const event of data.events){
+   const source=new URL(event[3]);assert.equal(source.protocol,'https:','Event sources must use HTTPS');
+   if(source.hostname==='linkedin.com'||source.hostname.endsWith('.linkedin.com')){
+    assert(/^\/(posts\/[^/]+|feed\/update\/urn:li:(activity|share):\d+)\/?$/.test(decodeURIComponent(source.pathname)),`Event ${event[1]} must link to a specific post, not a LinkedIn profile or search page`);
+   }
+  }
+ }
 }
 const gallery=JSON.parse(await readFile(path.join(out,'gallery/credits.json'),'utf8'));
 assert(!/shield/i.test(JSON.stringify(gallery)),'SHIELD photograph in gallery');

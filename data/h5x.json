@@ -20,9 +20,11 @@
     "portfolio": "https://vasanthadithya-portfolio.vercel.app/",
     "team1": "https://www.linkedin.com/posts/vasanthadithya-mundrathi-84a54031a_team1-hyderabaddao-avalanche-activity-7463970170252713984-jjgL",
     "shield": "https://www.linkedin.com/posts/sai-geethika-yedla_shield2026-tgcsb-telanganapolice-activity-7429204319503261696-QYGY",
-    "devfest26": "https://in.linkedin.com/in/poojitha-vollala-728a583b6",
-    "devfest25": "https://in.linkedin.com/in/bevin-bijoy-b68ba7378",
-    "assistive": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7413575402776014848/"
+    "devfest26": "https://www.linkedin.com/feed/update/urn:li:activity:7520188249689182208/",
+    "devfest25": "https://www.linkedin.com/posts/sai-geethika-yedla_devfest-devfesthyd-gdghyd-ugcPost-7394755523390337024-_zv6/",
+    "assistive": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7413575402776014848/",
+    "aiSummit": "https://www.linkedin.com/feed/update/urn:li:activity:7433903114052648960/",
+    "yc": "https://www.linkedin.com/feed/update/urn:li:activity:7521651457448751104/"
   },
   "selected": [
     [
@@ -249,13 +251,13 @@
       "2026 / HYDERABAD",
       "GDG DevFest",
       "Public attendance account names the four core members.",
-      "https://in.linkedin.com/in/poojitha-vollala-728a583b6"
+      "https://www.linkedin.com/feed/update/urn:li:activity:7520188249689182208/"
     ],
     [
       "2025 / HYDERABAD",
       "GDG DevFest",
       "Member account names Vasanthadithya, Geethika, Faisal, and Sai Bhavani.",
-      "https://in.linkedin.com/in/bevin-bijoy-b68ba7378"
+      "https://www.linkedin.com/posts/sai-geethika-yedla_devfest-devfesthyd-gdghyd-ugcPost-7394755523390337024-_zv6/"
     ],
     [
       "2026 / TGICCC",
@@ -273,13 +275,25 @@
       "2026 / NEW DELHI",
       "India AI Impact Summit",
       "Participant account names Vasanthadithya and Geethika.",
-      "https://in.linkedin.com/in/shruthi-kodari-a22ba6350"
+      "https://www.linkedin.com/feed/update/urn:li:activity:7433903114052648960/"
     ],
     [
       "2026 / ONLINE",
       "YC office hours",
       "H5X reports a 20-minute conversation with Jon Xu after Deccan CTF.",
-      "https://in.linkedin.com/in/faisal-tabrez-178ab8354"
+      "https://www.linkedin.com/feed/update/urn:li:activity:7521651457448751104/"
+    ],
+    [
+      "4 JAN 2026 / T-HUB",
+      "Telangana Assistive Technology Summit",
+      "Geethika and Srinath Manda presented the Beacon Vision prototype.",
+      "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7413575402776014848/"
+    ],
+    [
+      "HYDERABAD / COMMUNITY",
+      "PizzaDAO × Hyderabad DAO",
+      "An earlier gathering recalled in the Team1 event post.",
+      "https://www.linkedin.com/posts/vasanthadithya-mundrathi-84a54031a_team1-hyderabaddao-avalanche-activity-7463970170252713984-jjgL"
     ]
   ]
 }
