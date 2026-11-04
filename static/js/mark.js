@@ -1,5 +1,5 @@
-/* Adapted from H7-Tex/TX, commit 8204b29. The H5X mark built from 46 blocks, extruded into 3D and drawn in characters, lit the way donut.c lit its torus.
-   it sways, a ripple runs through it, it turns a full circle now and then. the cursor is its light, and the blocks
+/* Adapted from H7-Tex/TX, commit 8204b29. H5X is extruded into 3D and drawn as ASCII or coloured pixels.
+   it sways and a ripple runs through it. the cursor is its light, and the blocks
    under it part and rise to meet it. drag spins it. a tap breaks it into its blocks, and they find their own way home. */
 (function () {
   const box = document.querySelector('.art'), canvas = document.querySelector('#art');
@@ -10,19 +10,32 @@
   const mq = matchMedia('(prefers-color-scheme: dark)');
   const current = () => root.dataset.theme || (mq.matches ? 'dark' : 'light');
   const still = matchMedia('(prefers-reduced-motion: reduce)');
-  const GLYPH = ["110011011111011011","110011011000011011","110011011000001110","111111011110000100","110011000011001110","110011000011011011","110011011110011011"];
-  const GW = GLYPH[0].length;
+  const styles = [...document.querySelectorAll('[data-mark-style]')];
+  let markStyle = new URLSearchParams(location.search).get('mark');
+  if (!['ascii','logo','pixels'].includes(markStyle)) {
+    try { markStyle = localStorage.getItem('h5x-mark-style'); } catch {}
+  }
+  if (!['ascii','logo','pixels'].includes(markStyle)) markStyle = 'pixels';
+  function paintStyle() {
+    styles.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.markStyle===markStyle)));
+    box.dataset.style = markStyle;
+    box.dataset.logo = 'official';
+    box.setAttribute('aria-label',markStyle==='pixels'?'The official brushstroke H5X logo made of multicoloured animated pixels':markStyle==='logo'?'The official H5X logo in animated pixels, preserving the orange 5':'The official brushstroke H5X logo drawn in animated ASCII characters');
+  }
+  paintStyle();
+  const GLYPH = window.H5XLogo.rows;
+  const GW = GLYPH[0].length, GH = GLYPH.length, UNIT = GW/18;
   const FACE = '+*#%@', SIDE = '.,-~:;=!*#';
-  const DEPTH = 1.8, S = 6, OVER = 0.14, TAU = Math.PI * 2; // the canvas overhangs its box by OVER a side, so flying blocks aren't cut off at the edge
-  const on = (x, y) => y >= 0 && y < 7 && x >= 0 && x < GW && GLYPH[y][x] === '1';
+  const DEPTH = GW*.035, S = 1, OVER = 0.14, TAU = Math.PI * 2;
+  const on = (x, y) => y >= 0 && y < GH && x >= 0 && x < GW && GLYPH[y][x] !== '0';
   const IDX = GLYPH.map(() => []);
   let count = 0;
-  for (let y = 0; y < 7; y++) for (let x = 0; x < GW; x++) if (on(x, y)) IDX[y][x] = ++count;
+  for (let y = 0; y < GH; y++) for (let x = 0; x < GW; x++) if (on(x, y)) IDX[y][x] = ++count;
   const at = (x, y) => (on(x, y) ? IDX[y][x] : 0);
   // one entry per block: home, offset p, velocity v, tilt r, spin w, and surface points [lx, ly, lz, nx, ny, nz, front, neighbour]
   // a side that touches a neighbour (neighbour = its index + 1) only shows once one of the two has moved
   const BLOCKS = [];
-  for (let y = 0; y < 7; y++) for (let x = 0; x < GW; x++) {
+  for (let y = 0; y < GH; y++) for (let x = 0; x < GW; x++) {
     if (!on(x, y)) continue;
     const pts = [];
     const face = (n, f, front, nb) => { for (let i = 0; i < S; i++) for (let j = 0; j < S; j++) pts.push([...f((i + 0.5) / S - 0.5, (j + 0.5) / S - 0.5), ...n, front, nb]); };
@@ -32,21 +45,23 @@
     face([1, 0, 0], (a, b) => [0.5, a, b * DEPTH], 0, at(x + 1, y));
     face([0, 1, 0], (a, b) => [a, 0.5, b * DEPTH], 0, at(x, y - 1));
     face([0, -1, 0], (a, b) => [a, -0.5, b * DEPTH], 0, at(x, y + 1));
-    BLOCKS.push({ hx: x - (GW - 1) / 2, hy: 3 - y, p: [0, 0, 0], v: [0, 0, 0], r: [0, 0, 0], w: [0, 0, 0], hold: 0, show: -1, away: false, rest: true, sx: 0, sy: 0, hsx: 0, hsy: 0, pts });
+    BLOCKS.push({ hx: x - (GW - 1) / 2, hy: (GH-1)/2 - y, tone:GLYPH[y][x], p: [0, 0, 0], v: [0, 0, 0], r: [0, 0, 0], w: [0, 0, 0], hold: 0, show: -1, away: false, rest: true, sx: 0, sy: 0, hsx: 0, hsy: 0, pts });
   }
 
   let W, H, BW, BH, cw, ch, cols, rows, zb, raf = 0, visible = true, last = 0, t = 2.2, clock = 0;
-  let turn = 0, turnVel = 0, nextTurn = 9, lean = [0, 0], aim = [0, 0], light = [-0.4, 0.45], cursor = null, press = null, userSpin = false, tickAt = 0;
+  let turn = 0, turnVel = 0, lean = [0, 0], aim = [0, 0], light = [-0.4, 0.45], cursor = null, press = null, userSpin = false, tickAt = 0;
   let view = [1, 0, 1, 0], rings = [], nextPop = 12, pending = 0, total = 0, lastDock = 0;
   function size() {
     const dpr = Math.min(2, devicePixelRatio || 1), r = box.getBoundingClientRect();
     BW = r.width; BH = r.height; W = BW * (1 + 2 * OVER); H = BH * (1 + 2 * OVER);
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.imageSmoothingEnabled = false;
     const fs = Math.max(7.5, Math.min(11, BW / 52));
     ctx.font = `${fs}px Fragment, ui-monospace, monospace`;
     ctx.textBaseline = 'top';
-    cw = ctx.measureText('M').width; ch = fs * 1.2;
+    if (markStyle!=='ascii') cw = ch = Math.max(2.5,Math.min(5,Math.round(BW/112)));
+    else { cw = ctx.measureText('M').width; ch = fs * 1.2; }
     cols = Math.floor(W / cw); rows = Math.floor(H / ch);
     zb = new Float32Array(cols * rows);
   }
@@ -62,7 +77,7 @@
     for (const b of BLOCKS) {
       const dx = b.sx - px, dy = b.sy - py, d = Math.hypot(dx, dy) || 1, f = Math.max(0, 1 - d / R);
       if (f > 0) {
-        const out = (5 + 9 * f) * (0.75 + Math.random() * 0.5), deep = (Math.random() * 1.7 - 0.45) * 13 * f;
+        const out = (5 + 9 * f) * (0.75 + Math.random() * 0.5)*UNIT, deep = (Math.random() * 1.7 - 0.45) * 13 * f*UNIT;
         const m = toModel((dx / d) * out, (-dy / d) * out, deep);
         for (let i = 0; i < 3; i++) { b.v[i] += m[i]; b.w[i] += (Math.random() - 0.5) * 16 * f; }
         b.hold = clock + 0.3 + (d / R) * 0.35 + Math.random() * 0.15;
@@ -80,11 +95,16 @@
   function arrive() {
     pending = BLOCKS.length; total = 0;
     for (const b of BLOCKS) {
-      b.p = [(Math.random() - 0.5) * 12, (Math.random() - 0.5) * 8, 7 + Math.random() * 5];
+      b.p = [(Math.random() - 0.5) * 12*UNIT, (Math.random() - 0.5) * 8*UNIT, (7 + Math.random() * 5)*UNIT];
       b.r = [(Math.random() - 0.5) * 6, (Math.random() - 0.5) * 6, (Math.random() - 0.5) * 6];
       b.hold = b.show = 0.1 + ((b.hx + (GW - 1) / 2) / (GW - 1)) * 0.55 + Math.random() * 0.12;
       b.away = true; b.rest = false;
     }
+  }
+
+  function assemble() {
+    pending=total=0;rings=[];turn=turnVel=0;lean=[0,0];aim=[0,0];cursor=null;press=null;
+    for(const b of BLOCKS){b.p=[0,0,0];b.v=[0,0,0];b.r=[0,0,0];b.w=[0,0,0];b.hold=0;b.show=-1;b.away=false;b.rest=true;}
   }
 
   const point = (e) => { const r = canvas.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
@@ -113,8 +133,8 @@
       let lift = 0, part = [0, 0, 0];
       if (cursor && moving && !press) {
         const dx = b.hsx - cursor[0], dy = b.hsy - cursor[1], d = Math.hypot(dx, dy) || 1, f = Math.max(0, 1 - d / reach);
-        lift = f * f * 1.2;
-        if (f) part = toModel((dx / d) * f * 1.1, (-dy / d) * f * 1.1, 0);
+        lift = f * f * 1.2*UNIT;
+        if (f) part = toModel((dx / d) * f * 1.1*UNIT, (-dy / d) * f * 1.1*UNIT, 0);
       }
       if (clock < b.hold) {
         // thrown: drift, slowing, still tumbling
@@ -145,7 +165,7 @@
     // now and then, when nothing is happening, one block taps out and back
     if (moving && !cursor && !press && !pending && clock > nextPop) {
       const b = BLOCKS[Math.floor(Math.random() * BLOCKS.length)];
-      for (let i = 0; i < 3; i++) { b.v[i] += toward[i] * 6; b.w[i] += (Math.random() - 0.5) * 3; }
+      for (let i = 0; i < 3; i++) { b.v[i] += toward[i] * 6*UNIT; b.w[i] += (Math.random() - 0.5) * 3; }
       nextPop = clock + 9 + Math.random() * 9;
       busy = true;
     }
@@ -158,8 +178,7 @@
     const moving = !still.matches && !window.h5xMotionPaused;
     clock += dt;
     if (moving) t += dt;
-    // a full turn every so often, unless someone is already spinning it
-    if (moving && t > nextTurn && Math.abs(turnVel) < 0.002 && !press) { turnVel += 0.115; nextTurn = t + 11 + Math.random() * 5; }
+    // The brushstroke stays readable during idle motion; dragging still spins it.
     turn += turnVel; turnVel *= press?.moved ? 0.85 : 0.955;
     // a ratchet tick every 15 degrees while someone is spinning it by hand
     if (userSpin) {
@@ -175,12 +194,12 @@
     light[0] += (lt[0] - light[0]) * ease * 0.9; light[1] += (lt[1] - light[1]) * ease * 0.9;
     const ln = Math.hypot(light[0], light[1], 0.8), Lx = light[0] / ln, Ly = light[1] / ln, Lz = 0.8 / ln;
 
-    const A = (moving ? 0.55 * Math.sin(t * 0.5) : 0.35) + turn + lean[0] * 0.55;
+    const A = (moving ? 0.24 * Math.sin(t * 0.5) : 0.12) + turn + lean[0] * 0.4;
     const B = (moving ? 0.18 * Math.sin(t * 0.33) : 0.12) - 0.08 + lean[1] * 0.4;
     const ca = Math.cos(A), sa = Math.sin(A), cb = Math.cos(B), sb = Math.sin(B);
     view = [ca, sa, cb, sb];
     busy = step(dt, moving);
-    const dist = 18, K = Math.min(BW * 0.76, BH * 1.02) * dist / (GW + .5), cx = W / 2, cy = H / 2;
+    const dist = GW*1.6, K = Math.min(BW*.88/(GW+1),BH*.86/(GH+1))*dist, cx = W / 2, cy = H / 2;
     const dark = current() === 'dark';
     zb.fill(0);
     const cells = new Map();
@@ -210,8 +229,8 @@
         }
         const x0 = ox + lx, y = oy + ly;
         // ripple: the glyph bends along its length like cloth in a breeze; the phase stays pinned to each block's home
-        const ph = 0.75 * (b.hx + pt[0]) - t * 2.1 + (b.hy + pt[1]) * 0.25;
-        const w = moving ? 0.32 * Math.sin(ph) : 0, slope = moving ? 0.24 * Math.cos(ph) : 0;
+        const ph = 0.75 * (b.hx + pt[0])/UNIT - t * 2.1 + (b.hy + pt[1])/UNIT * 0.25;
+        const w = moving ? 0.22*UNIT * Math.sin(ph) : 0, slope = moving ? 0.165 * Math.cos(ph) : 0;
         const z = oz + lz + w, nx = nx0 - slope * nz0, nz = nz0 + slope * nx0;
         const X = x0 * ca + z * sa, Z = -x0 * sa + z * ca;
         const Y2 = y * cb - Z * sb, Z2 = y * sb + Z * cb;
@@ -225,15 +244,31 @@
         if (ooz <= zb[i]) continue;
         zb[i] = ooz;
         const L = Math.max(0, Math.min(0.999, 0.5 + 0.5 * (NX * Lx + NY2 * Ly + NZ2 * Lz)));
-        cells.set(i, pt[6] ? [FACE[Math.floor(L * FACE.length)], 1, alpha] : [SIDE[Math.floor((dark ? L : 1 - L) * SIDE.length)], 0, alpha * 0.7]);
+        // Colour follows each physical block, including while it scatters and spins.
+        const hue = (190 + (b.hx+(GW-1)/2)/UNIT*16 + ((GH-1)/2-b.hy)/GH*63 + t*7) % 360;
+        const variation = Math.sin((b.hx+pt[0])/UNIT*2.8+(b.hy+pt[1])/UNIT*3.7+t*.8)*3;
+        const luminance = (dark?52:42) + L*14 + variation - (pt[6]?0:17);
+        cells.set(i, pt[6] ? [FACE[Math.floor(L * FACE.length)], 1, alpha,hue,luminance,b.tone] : [SIDE[Math.floor((dark ? L : 1 - L) * SIDE.length)], 0, alpha * 0.82,hue,luminance,b.tone]);
       }
     }
     const css = getComputedStyle(root), ink = css.getPropertyValue('--ink'), acc = css.getPropertyValue('--acc');
     ctx.clearRect(0, 0, W, H);
-    for (const [i, [g, f, a]] of cells) {
-      ctx.fillStyle = f ? acc : ink;
+    for (const [i, [g, f, a, hue, luminance, tone]] of cells) {
+      const x=(i%cols)*cw,y=Math.floor(i/cols)*ch;
       ctx.globalAlpha = a;
-      ctx.fillText(g, (i % cols) * cw, Math.floor(i / cols) * ch);
+      if (markStyle!=='ascii') {
+        const gap=cw>=5?1:0.6;
+        ctx.fillStyle=markStyle==='pixels'?`hsl(${hue} 84% ${luminance}%)`:tone==='2'?`hsl(19 100% ${f?53:37}%)`:dark?`hsl(40 15% ${f?90:53}%)`:`hsl(35 15% ${f?17:41}%)`;
+        ctx.fillRect(x+gap/2,y+gap/2,cw-gap,ch-gap);
+        if (f&&cw>=5) {
+          ctx.fillStyle=markStyle==='pixels'?`hsl(${hue} 90% ${Math.min(85,luminance+17)}%)`:tone==='2'?'#ff9a5a':dark?'#ffffff':'#756f65';
+          ctx.globalAlpha=a*.45;
+          ctx.fillRect(x+gap/2,y+gap/2,cw-gap,1);
+        }
+      } else {
+        ctx.fillStyle = tone==='2' ? acc : ink;
+        ctx.fillText(g,x,y);
+      }
     }
     // the ring a tap leaves: a circle of dots running out from it, behind the blocks
     ctx.fillStyle = ink;
@@ -244,7 +279,10 @@
       const n = Math.max(12, Math.floor((TAU * R) / (cw * 1.7)));
       for (let k = 0; k < n; k++) {
         const c = Math.floor((g.x + Math.cos((k / n) * TAU) * R) / cw), r = Math.floor((g.y + Math.sin((k / n) * TAU) * R) / ch);
-        if (c >= 0 && c < cols && r >= 0 && r < rows && !cells.has(r * cols + c)) ctx.fillText('·', c * cw, r * ch);
+        if (c >= 0 && c < cols && r >= 0 && r < rows && !cells.has(r * cols + c)) {
+          if(markStyle!=='ascii'){ctx.fillStyle=markStyle==='pixels'?`hsl(${(190+k*3+t*7)%360} 85% ${dark?65:45}%)`:acc;ctx.fillRect(c*cw+cw*.3,r*ch+ch*.3,cw*.4,ch*.4);}
+          else ctx.fillText('·', c * cw, r * ch);
+        }
       }
       return true;
     });
@@ -253,14 +291,20 @@
   // one loop at a time; theme changes and resizes just ask for the next frame
   const loop = (now) => { raf = 0; draw(now); if (visible && ((!still.matches && !window.h5xMotionPaused) || busy || rings.length || Math.abs(turnVel) > 0.001 || press)) raf = requestAnimationFrame(loop); };
   const kick = () => { if (!raf) raf = requestAnimationFrame(loop); };
+  styles.forEach(button=>button.addEventListener('click',()=>{
+    markStyle=button.dataset.markStyle;
+    try{localStorage.setItem('h5x-mark-style',markStyle);}catch{}
+    const url=new URL(location.href);url.searchParams.set('mark',markStyle);history.replaceState(null,'',url);
+    assemble();paintStyle();size();draw(performance.now());kick();sound.note(markStyle==='pixels'?2:0);
+  }));
   new IntersectionObserver(([e]) => { visible = e.isIntersecting && !document.hidden; if (visible) kick(); }).observe(box);
   document.addEventListener('visibilitychange', () => { visible = !document.hidden; if (visible) kick(); });
   addEventListener('resize', () => { size(); kick(); });
   mq.addEventListener('change', kick);
-  still.addEventListener('change', kick);
+  still.addEventListener('change',()=>{if(still.matches)assemble();kick();});
   document.querySelectorAll('[data-set]').forEach((b) => b.addEventListener('click', kick));
-  document.addEventListener('h5x:motion', kick);
+  document.addEventListener('h5x:motion',()=>{if(window.h5xMotionPaused)assemble();kick();});
   document.addEventListener('h5x:scatter', () => shatter(W/2, H/2));
   new ResizeObserver(() => { if(box.clientWidth){size();kick();} }).observe(box);
-  document.fonts.ready.then(() => { size(); if (!still.matches) arrive(); kick(); });
+  document.fonts.ready.then(() => { size(); if (!still.matches&&!window.h5xMotionPaused) arrive(); kick(); });
 })();

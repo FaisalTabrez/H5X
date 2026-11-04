@@ -16,7 +16,7 @@ if(!data.ctftime)throw Error('No verified CTFtime snapshot. Run npm run sync:ctf
 const shell=await readFile(path.join(ROOT,'src/shell.html'),'utf8');
 await rm(OUT,{recursive:true,force:true});
 await mkdir(OUT,{recursive:true});
-for(const folder of ['css','js','fonts','gallery'])await cp(path.join(ROOT,'static',folder),path.join(OUT,folder),{recursive:true});
+for(const folder of ['css','js','fonts','gallery','branding'])await cp(path.join(ROOT,'static',folder),path.join(OUT,folder),{recursive:true});
 // Embedded font URLs also preserve the typography when opened directly from disk.
 let css=await readFile(path.join(OUT,'css/site.css'),'utf8');
 for(const font of ['bricolage.woff2','fragment-mono.woff2']){
