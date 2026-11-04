@@ -21,3 +21,4 @@
 .eyebrow,.intro-note,.home-actions,.art-caption,.appearance,.footer,.nav,.credit,.entry-number,.pager,.text-link,.result-switch,.result-row small,.gallery-count,.gallery-credit,.photo-choice small,.featured-photo figcaption a{font-size:11px}
 @media(max-width:760px){.art[data-logo=official]{aspect-ratio:1.5;max-height:320px}.art-options{flex-wrap:wrap}.mark-switch{margin-left:auto}.mark-switch button{padding-inline:9px}}
 @media(pointer:coarse){.mark-switch button{min-height:44px}}
+.research-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:11px;color:var(--acc)}.research-links a{padding-block:7px}
