@@ -24,7 +24,9 @@
     "devfest25": "https://www.linkedin.com/posts/sai-geethika-yedla_devfest-devfesthyd-gdghyd-ugcPost-7394755523390337024-_zv6/",
     "assistive": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7413575402776014848/",
     "aiSummit": "https://www.linkedin.com/feed/update/urn:li:activity:7433903114052648960/",
-    "yc": "https://www.linkedin.com/feed/update/urn:li:activity:7521651457448751104/"
+    "yc": "https://www.linkedin.com/feed/update/urn:li:activity:7521651457448751104/",
+    "zodiakFinals": "https://www.linkedin.com/feed/update/urn:li:activity:7508138676044935169/",
+    "deccan": "https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/"
   },
   "selected": [
     [
@@ -46,7 +48,7 @@
       "ContextCon Deccan CTF",
       "IIIT Hyderabad · 2 October 2026",
       "Member-reported result",
-      "https://in.linkedin.com/in/faisal-tabrez-178ab8354"
+      "https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/"
     ],
     [
       "03",
@@ -248,6 +250,20 @@
   ],
   "events": [
     [
+      "2 OCT 2026 / IIIT HYDERABAD",
+      "ContextCon Deccan CTF",
+      "We finished second at Infinium ’26 after 12 hours of solving, with 7,657 points.",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/",
+      "deccan-ctf-group.jpg"
+    ],
+    [
+      "19 SEP 2026 / VIT VELLORE",
+      "z0d1ak CTF Finals",
+      "We took second place and a $500 prize at the on-campus finals during graVITas.",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7508138676044935169/",
+      "zodiak-finals-award.jpg"
+    ],
+    [
       "2026 / HYDERABAD",
       "GDG DevFest",
       "Vasanthadithya, Geethika, Akshay, and Faisal attended together.",
@@ -295,5 +311,56 @@
       "An earlier gathering recalled in the Team1 event post.",
       "https://www.linkedin.com/posts/vasanthadithya-mundrathi-84a54031a_team1-hyderabaddao-avalanche-activity-7463970170252713984-jjgL"
     ]
+  ],
+  "gallery": [
+    {
+      "file": "gallery/deccan-ctf-group.jpg",
+      "title": "Deccan CTF / second place",
+      "event": "IIIT Hyderabad · Deccan CTF",
+      "alt": "H5X teammates beside the Deccan CTF scoreboard showing H5X in second place",
+      "source": "https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/"
+    },
+    {
+      "file": "gallery/deccan-ctf-team.jpg",
+      "title": "Deccan CTF / at the scoreboard",
+      "event": "IIIT Hyderabad · Deccan CTF",
+      "alt": "H5X members pointing to their second-place finish on the Deccan CTF scoreboard",
+      "source": "https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/"
+    },
+    {
+      "file": "gallery/zodiak-finals-award.jpg",
+      "title": "z0d1ak Finals / award moment",
+      "event": "VIT Vellore · z0d1ak Finals",
+      "alt": "H5X receiving the first runner-up award at the z0d1ak CTF Finals",
+      "source": "https://www.linkedin.com/feed/update/urn:li:activity:7508138676044935169/"
+    },
+    {
+      "file": "gallery/zodiak-finals-community.jpg",
+      "title": "z0d1ak Finals / meeting the community",
+      "event": "VIT Vellore · z0d1ak Finals",
+      "alt": "Team members and fellow competitors together in the z0d1ak finals lecture hall",
+      "source": "https://www.linkedin.com/feed/update/urn:li:activity:7508138676044935169/"
+    },
+    {
+      "file": "gallery/cyberstrike-0.jpg",
+      "title": "CyberStrike ’26 / podium moment",
+      "event": "SNIST · CyberStrike",
+      "alt": "H5X holding the CyberStrike third-place award",
+      "source": "https://www.linkedin.com/posts/vasanthadithya-mundrathi-84a54031a_cyberstrike26-cybersecurity-ctf-activity-7482607401603325952-3Qq_"
+    },
+    {
+      "file": "gallery/team1-1.jpg",
+      "title": "Team1 Builders Connect",
+      "event": "DevX · Hyderabad",
+      "alt": "Meetup photograph shared in the Team1 Builders Connect post",
+      "source": "https://www.linkedin.com/posts/vasanthadithya-mundrathi-84a54031a_team1-hyderabaddao-avalanche-activity-7463970170252713984-jjgL"
+    },
+    {
+      "file": "gallery/team1-2.jpg",
+      "title": "Builders, in the room",
+      "event": "Hyderabad DAO × Team1",
+      "alt": "Member photograph beside the Hyderabad DAO and Team1 event banners",
+      "source": "https://www.linkedin.com/posts/vasanthadithya-mundrathi-84a54031a_team1-hyderabaddao-avalanche-activity-7463970170252713984-jjgL"
+    }
   ]
 }

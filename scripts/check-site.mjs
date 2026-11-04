@@ -26,4 +26,14 @@ for(const file of ['index.html','bug-hunt.html','hackathon.html','events.html','
 }
 const gallery=JSON.parse(await readFile(path.join(out,'gallery/credits.json'),'utf8'));
 assert(!/shield/i.test(JSON.stringify(gallery)),'SHIELD photograph in gallery');
+const galleryPage=await readFile(path.join(out,'gallery.html'),'utf8');
+const galleryData=JSON.parse(galleryPage.match(/id="h5x-data"[^>]*>(.*?)<\/script>/s)[1]);
+for(const photo of galleryData.gallery){
+ assert(/^gallery\/[a-z0-9-]+\.jpg$/.test(photo.file),'Unexpected gallery asset path');
+ await access(path.join(out,photo.file));
+ assert(gallery.some(credit=>`gallery/${credit.file}`===photo.file&&credit.source_post===photo.source),'Gallery photograph must have a matching original-post credit');
+}
+for(const event of galleryData.events){
+ if(event[4])assert(galleryData.gallery.some(photo=>photo.file===`gallery/${event[4]}`),'Event thumbnail must open an existing gallery photograph');
+}
 console.log('Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.');
