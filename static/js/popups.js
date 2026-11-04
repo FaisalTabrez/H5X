@@ -28,8 +28,8 @@
  }
  function content(){
   const d=feed(),s=d.seasons.at(-1);
-  if(view==='profile')return `<div class="profile-monogram mono">H5X /</div><h2>Built on curiosity.</h2><p>Four core members, from CBIT and MGIT.<br>Hyderabad, India.</p><dl class="profile-facts mono"><div><dt>founded</dt><dd>2024 · hackathons & events</dd></div><div><dt>expanded</dt><dd>July 2026 · CTFs & bug hunting</dd></div><div><dt>CTFtime</dt><dd>${out(D.sources.ctf,'team 438630 ↗')}</dd></div></dl>${s?`<div class="profile-standing mono">${s.year} <strong>#${s.world}</strong> world <strong>#${s.india??'—'}</strong> India</div>`:''}<div class="popup-links mono"><button type="button" data-pop-view="team">meet the team ↗</button><button type="button" data-pop-view="results">competition log ↗</button></div><div class="feed-note mono">${status()}</div>`;
-  if(view==='team')return `<h2>Four people. One team.</h2>${people.map(p=>`<div class="people"><strong>${out(p[2],escape(p[0]))}</strong><span class="mono">${escape(p[1])}</span></div>`).join('')}<p class="popup-footnote mono">CBIT × MGIT · HYDERABAD</p>`;
+  if(view==='profile')return `<div class="profile-monogram mono">H5X /</div><h2>Built on curiosity.</h2><p>We’re a growing team of builders and security enthusiasts.<br>Hyderabad, India.</p><dl class="profile-facts mono"><div><dt>founded</dt><dd>2024 · hackathons & events</dd></div><div><dt>expanded</dt><dd>July 2026 · CTFs & bug hunting</dd></div><div><dt>CTFtime</dt><dd>${out(D.sources.ctf,'team 438630 ↗')}</dd></div></dl>${s?`<div class="profile-standing mono">${s.year} <strong>#${s.world}</strong> world <strong>#${s.india??'—'}</strong> India</div>`:''}<div class="popup-links mono"><button type="button" data-pop-view="team">meet the team ↗</button><button type="button" data-pop-view="results">competition log ↗</button></div><div class="feed-note mono">${status()}</div>`;
+  if(view==='team')return `<h2>More minds. One team.</h2><p>We’re growing. Meet some of the people behind H5X.</p>${people.map(p=>`<div class="people"><strong>${out(p[2],escape(p[0]))}</strong><span class="mono">${escape(p[1])}</span></div>`).join('')}<p class="popup-footnote mono">BUILDING TOGETHER · HYDERABAD</p>`;
   if(view==='results')return resultContent();
   if(view==='build')return `<h2>Ideas into working things.</h2><p>Hackathons have been part of H5X since 2024.</p>${D.projects.slice(0,3).map(p=>`<div class="preview-row"><small class="mono">${escape(p[0])}</small><strong>${out(p[4],escape(p[1])+' ↗')}</strong><p>${escape(p[2])}</p></div>`).join('')}<a class="popup-page-link mono" href="hackathon.html">explore the builds ↗</a>`;
   if(view==='hunt')return `<h2>Look closer. Find the edge.</h2><p>We started bug hunting in July 2026. We investigate real systems, disclose responsibly, and follow through.</p><div class="preview-row"><strong>C-DAC · DeepSweep · Hack Monty</strong><p>Our captain Vasanthadithya’s work spans validated findings, coordinated disclosures, and a partial bounty.</p></div><a class="popup-page-link mono" href="bug-hunt.html">explore our research ↗</a>`;
@@ -43,7 +43,7 @@
   pop.style.left=Math.max(16,Math.min(stage.left,innerWidth-w-20))+'px';
   pop.style.top=Math.max(16,Math.min(r.top-12,innerHeight-h-20))+'px';
  }
- function render(){label.textContent={profile:'H5X / HYDERABAD',team:'04 PEOPLE / 02 COLLEGES',results:'THE PUBLIC RECORD',build:'BUILD / SINCE 2024',hunt:'BUG HUNT / SINCE JUL 2026',events:'OUT IN THE WORLD'}[view];body.innerHTML=content();position();}
+ function render(){label.textContent={profile:'H5X / HYDERABAD',team:'H5X / GROWING TOGETHER',results:'THE PUBLIC RECORD',build:'BUILD / SINCE 2024',hunt:'BUG HUNT / SINCE JUL 2026',events:'OUT IN THE WORLD'}[view];body.innerHTML=content();position();}
  function open(next,trigger,pin=false){
   clearTimeout(timer);if(pinned&&!pin&&view!==next)return;
   const changed=view!==next||pop.hidden;view=next;active=trigger||active;pinned=pin||pinned;pop.hidden=false;

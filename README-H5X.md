@@ -4,7 +4,7 @@ The public website is hosted on GitHub Pages at https://faisaltabrez.github.io/H
 
 ## Interactions
 
-Hover or keyboard-focus the six highlighted phrases for floating previews: H5X, build, compete, hunt, show up and Four people. Click/tap pins a card. Escape, close or clicking outside dismisses it. On phones, previews use a bottom card. The original ASCII renderer supports drag, scatter/reassembly, pause and reduced motion. Sound is opt-in; light/dark theme choice persists locally.
+Hover or keyboard-focus the six highlighted phrases for floating previews: H5X, build, compete, hunt, show up and A growing team. The team preview introduces the listed members without implying a fixed roster size. Click/tap pins a card. Escape, close or clicking outside dismisses it. On phones, previews use a bottom card. The original ASCII renderer supports drag, scatter/reassembly, pause and reduced motion. Sound is opt-in; light/dark theme choice persists locally.
 
 ## Automatic records
 
