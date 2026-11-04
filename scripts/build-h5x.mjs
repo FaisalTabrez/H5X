@@ -27,7 +27,7 @@ for(const font of ['bricolage.woff2','fragment-mono.woff2']){
  css=css.replaceAll(`url(../fonts/${font})`,`url(data:font/woff2;base64,${bytes.toString('base64')})`);
 }
 await writeFile(path.join(OUT,'css/site.css'),css);
-await cp(path.join(ROOT,'static/favicon.svg'),path.join(OUT,'favicon.svg'));
+for(const icon of ['favicon.svg','favicon.png','favicon.ico'])await cp(path.join(ROOT,'static',icon),path.join(OUT,icon));
 await writeFile(path.join(OUT,'ctftime.json'),JSON.stringify(pagesMode?{...feedConfig,data:data.ctftime}:data.ctftime));
 for(const [filename,key,title] of pages){
  const content=await readFile(path.join(ROOT,'src/pages',key+'.html'),'utf8');
