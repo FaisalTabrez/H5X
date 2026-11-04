@@ -12,15 +12,16 @@
   const still = matchMedia('(prefers-reduced-motion: reduce)');
   const styles = [...document.querySelectorAll('[data-mark-style]')];
   let markStyle = new URLSearchParams(location.search).get('mark');
-  if (!['ascii','logo','pixels'].includes(markStyle)) {
+  if(markStyle==='pixels')markStyle='logo';
+  if (!['ascii','logo'].includes(markStyle)) {
     try { markStyle = localStorage.getItem('h5x-mark-style'); } catch {}
   }
-  if (!['ascii','logo','pixels'].includes(markStyle)) markStyle = 'pixels';
+  if (!['ascii','logo'].includes(markStyle)) markStyle = 'logo';
   function paintStyle() {
     styles.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.markStyle===markStyle)));
     box.dataset.style = markStyle;
     box.dataset.logo = 'official';
-    box.setAttribute('aria-label',markStyle==='pixels'?'The official brushstroke H5X logo made of multicoloured animated pixels':markStyle==='logo'?'The official H5X logo in animated pixels, preserving the orange 5':'The official brushstroke H5X logo drawn in animated ASCII characters');
+    box.setAttribute('aria-label',markStyle==='logo'?'The official H5X logo in animated pixels, preserving the orange 5':'The official brushstroke H5X logo drawn in animated ASCII characters');
   }
   paintStyle();
   const GLYPH = window.H5XLogo.rows;
@@ -244,29 +245,25 @@
         if (ooz <= zb[i]) continue;
         zb[i] = ooz;
         const L = Math.max(0, Math.min(0.999, 0.5 + 0.5 * (NX * Lx + NY2 * Ly + NZ2 * Lz)));
-        // Colour follows each physical block, including while it scatters and spins.
-        const hue = (190 + (b.hx+(GW-1)/2)/UNIT*16 + ((GH-1)/2-b.hy)/GH*63 + t*7) % 360;
-        const variation = Math.sin((b.hx+pt[0])/UNIT*2.8+(b.hy+pt[1])/UNIT*3.7+t*.8)*3;
-        const luminance = (dark?52:42) + L*14 + variation - (pt[6]?0:17);
-        cells.set(i, pt[6] ? [FACE[Math.floor(L * FACE.length)], 1, alpha,hue,luminance,b.tone] : [SIDE[Math.floor((dark ? L : 1 - L) * SIDE.length)], 0, alpha * 0.82,hue,luminance,b.tone]);
+        cells.set(i, pt[6] ? [FACE[Math.floor(L * FACE.length)], 1, alpha,b.tone] : [SIDE[Math.floor((dark ? L : 1 - L) * SIDE.length)], 0, alpha * 0.82,b.tone]);
       }
     }
     const css = getComputedStyle(root), ink = css.getPropertyValue('--ink'), acc = css.getPropertyValue('--acc');
     ctx.clearRect(0, 0, W, H);
-    for (const [i, [g, f, a, hue, luminance, tone]] of cells) {
+    for (const [i, [g, f, a, tone]] of cells) {
       const x=(i%cols)*cw,y=Math.floor(i/cols)*ch;
       ctx.globalAlpha = a;
       if (markStyle!=='ascii') {
         const gap=cw>=5?1:0.6;
-        ctx.fillStyle=markStyle==='pixels'?`hsl(${hue} 84% ${luminance}%)`:tone==='2'?`hsl(19 100% ${f?53:37}%)`:dark?`hsl(40 15% ${f?90:53}%)`:`hsl(35 15% ${f?17:41}%)`;
+        ctx.fillStyle=tone==='2'?(f?'#ff4d00':'#bd3900'):dark?`hsl(40 15% ${f?90:53}%)`:`hsl(35 15% ${f?17:41}%)`;
         ctx.fillRect(x+gap/2,y+gap/2,cw-gap,ch-gap);
         if (f&&cw>=5) {
-          ctx.fillStyle=markStyle==='pixels'?`hsl(${hue} 90% ${Math.min(85,luminance+17)}%)`:tone==='2'?'#ff9a5a':dark?'#ffffff':'#756f65';
+          ctx.fillStyle=tone==='2'?'#ff9a5a':dark?'#ffffff':'#756f65';
           ctx.globalAlpha=a*.45;
           ctx.fillRect(x+gap/2,y+gap/2,cw-gap,1);
         }
       } else {
-        ctx.fillStyle = tone==='2' ? acc : ink;
+        ctx.fillStyle = tone==='2' ? '#ff4d00' : ink;
         ctx.fillText(g,x,y);
       }
     }
@@ -280,7 +277,7 @@
       for (let k = 0; k < n; k++) {
         const c = Math.floor((g.x + Math.cos((k / n) * TAU) * R) / cw), r = Math.floor((g.y + Math.sin((k / n) * TAU) * R) / ch);
         if (c >= 0 && c < cols && r >= 0 && r < rows && !cells.has(r * cols + c)) {
-          if(markStyle!=='ascii'){ctx.fillStyle=markStyle==='pixels'?`hsl(${(190+k*3+t*7)%360} 85% ${dark?65:45}%)`:acc;ctx.fillRect(c*cw+cw*.3,r*ch+ch*.3,cw*.4,ch*.4);}
+          if(markStyle!=='ascii'){ctx.fillStyle='#ff4d00';ctx.fillRect(c*cw+cw*.3,r*ch+ch*.3,cw*.4,ch*.4);}
           else ctx.fillText('·', c * cw, r * ch);
         }
       }
@@ -295,7 +292,7 @@
     markStyle=button.dataset.markStyle;
     try{localStorage.setItem('h5x-mark-style',markStyle);}catch{}
     const url=new URL(location.href);url.searchParams.set('mark',markStyle);history.replaceState(null,'',url);
-    assemble();paintStyle();size();draw(performance.now());kick();sound.note(markStyle==='pixels'?2:0);
+    assemble();paintStyle();size();draw(performance.now());kick();sound.note(markStyle==='logo'?2:0);
   }));
   new IntersectionObserver(([e]) => { visible = e.isIntersecting && !document.hidden; if (visible) kick(); }).observe(box);
   document.addEventListener('visibilitychange', () => { visible = !document.hidden; if (visible) kick(); });
