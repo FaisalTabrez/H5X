@@ -4,7 +4,7 @@ Checked 4 November 2026. Four event arrows previously pointed to profile pages t
 
 | Event | Verified post and context |
 |---|---|
-| ContextCon Deccan CTF | [Vasanthadithya’s original event recap](https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/). Confirms second place at IIIT Hyderabad; the linked YC follow-up supplies the date, 12 hours and 7,657 points. Two team photographs copied from the original post. |
+| ContextCon Deccan CTF | [Vasanthadithya’s original event recap](https://www.linkedin.com/feed/update/urn:li:activity:7512221237364957184/). Confirms second place at IIIT Hyderabad; the linked YC follow-up supplies the date, 12 hours and 7,657 points. One full-team photograph retained from the original post; the smaller scoreboard group photograph was removed at the team’s request. |
 | z0d1ak CTF Finals | [Vasanthadithya’s original finals recap](https://www.linkedin.com/feed/update/urn:li:activity:7508138676044935169/). Confirms second place, $500 and VIT Vellore; the official CTFtime record gives 19 September 2026. Award and community photographs copied from the original post. |
 | GDG DevFest Hyderabad 2026 | [Sai Bhavani Yedla's recap, reposted by Geethika](https://www.linkedin.com/feed/update/urn:li:activity:7520188249689182208/). Names Vasanthadithya, Geethika, Akshay and Faisal. Replaces Poojitha Vollala's profile. |
 | GDG DevFest Hyderabad 2025 | [Geethika's original recap](https://www.linkedin.com/posts/sai-geethika-yedla_devfest-devfesthyd-gdghyd-ugcPost-7394755523390337024-_zv6/). Names Vasanthadithya, Faisal and Sai Bhavani alongside the author; describes the Novotel venue and workshops. Replaces Bevin Bijoy's profile. |
@@ -35,4 +35,4 @@ Events are sorted newest first by their ISO date in the fifth array field. `null
 
 The [original Agents, Everywhere announcement by Sai Geethika Yedla](https://www.linkedin.com/feed/update/urn:li:activity:7504251435417739264/) names Vasanthadithya Mundrathi, Faisal Tabrez and Akshay Kumar Akkapally as her teammates for 12 September 2026. All four names, including the author, now appear in the hackathon credit, and the source points directly to her post. Smart India Hackathon was removed at the team's request.
 
-Event photo previews were removed at the team's request. The four Deccan/z0d1ak photographs remain in Gallery with original-post credits.
+Event photo previews were removed at the team's request. The three Deccan/z0d1ak photographs remain in Gallery with original-post credits.
