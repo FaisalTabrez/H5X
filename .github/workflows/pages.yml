@@ -1,0 +1,87 @@
+name: Publish H5X and refresh CTFtime
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: h5x-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: npm run build:pages
+      - run: npm run check:site
+
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Test record validation and refresh behavior
+        run: npm test
+      - name: Refresh the complete H5X CTFtime record
+        id: sync
+        continue-on-error: true
+        run: npm run sync:ctftime
+      - name: Report an upstream outage
+        if: steps.sync.outcome != 'success'
+        run: echo '::warning::CTFtime is unavailable. Publishing the previous verified record with an explicit status and timestamp.'
+      - name: Build GitHub Pages site
+        env:
+          H5X_SYNC_OK: ${{ steps.sync.outcome == 'success' }}
+        run: npm run build:pages
+      - name: Verify all five pages and their assets
+        run: npm run check:site
+      - name: Save changed records or daily verification
+        if: steps.sync.outcome == 'success'
+        run: node scripts/persist-ctftime.mjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload the verified site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: out
+      - name: Write refresh summary
+        env:
+          REFRESH_OUTCOME: ${{ steps.sync.outcome }}
+        run: node scripts/workflow-summary.mjs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish H5X
+        id: deployment
+        uses: actions/deploy-pages@v4

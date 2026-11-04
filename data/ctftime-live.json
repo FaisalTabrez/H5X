@@ -1,0 +1,220 @@
+{
+  "schema": 1,
+  "teamId": 438630,
+  "teamName": "H5X",
+  "country": "IN",
+  "source": "https://ctftime.org/team/438630/",
+  "events": [
+    {
+      "id": 3272,
+      "title": "Anti-Slop CTF 2026",
+      "year": 2026,
+      "place": 276,
+      "points": 102,
+      "participants": 380,
+      "time": 1781312400,
+      "url": "https://ctftime.org/event/3272/"
+    },
+    {
+      "id": 3370,
+      "title": "z0d1ak CTF Qualifiers",
+      "year": 2026,
+      "place": 8,
+      "points": 7731,
+      "participants": 420,
+      "time": 1787328000,
+      "url": "https://ctftime.org/event/3370/"
+    },
+    {
+      "id": 3097,
+      "title": "NNS CTF 2026",
+      "year": 2026,
+      "place": 22,
+      "points": 6623,
+      "participants": 887,
+      "time": 1788537600,
+      "url": "https://ctftime.org/event/3097/"
+    },
+    {
+      "id": 3344,
+      "title": "TFC CTF 2026",
+      "year": 2026,
+      "place": 46,
+      "points": 5269,
+      "participants": 504,
+      "time": 1788602400,
+      "url": "https://ctftime.org/event/3344/"
+    },
+    {
+      "id": 3145,
+      "title": "K17 CTF 2026",
+      "year": 2026,
+      "place": 23,
+      "points": 3722,
+      "participants": 930,
+      "time": 1789120800,
+      "url": "https://ctftime.org/event/3145/"
+    },
+    {
+      "id": 3159,
+      "title": "PwnSec CTF 2026",
+      "year": 2026,
+      "place": 14,
+      "points": 4937,
+      "participants": 521,
+      "time": 1789221600,
+      "url": "https://ctftime.org/event/3159/"
+    },
+    {
+      "id": 3346,
+      "title": "NullOrigin CTF Qualifiers",
+      "year": 2026,
+      "place": 627,
+      "points": 410,
+      "participants": 987,
+      "time": 1789705800,
+      "url": "https://ctftime.org/event/3346/"
+    },
+    {
+      "id": 3392,
+      "title": "DefCamp Capture the Flag (D-CTF) 2026 Quals",
+      "year": 2026,
+      "place": 175,
+      "points": 245,
+      "participants": 372,
+      "time": 1789725600,
+      "url": "https://ctftime.org/event/3392/"
+    },
+    {
+      "id": 3355,
+      "title": "CSAW CTF Qualification Round 2026",
+      "year": 2026,
+      "place": 192,
+      "points": 1616,
+      "participants": 504,
+      "time": 1789747200,
+      "url": "https://ctftime.org/event/3355/"
+    },
+    {
+      "id": 3428,
+      "title": "z0d1ak CTF Finals",
+      "year": 2026,
+      "place": 2,
+      "points": 7113,
+      "participants": 16,
+      "time": 1789788600,
+      "url": "https://ctftime.org/event/3428/"
+    },
+    {
+      "id": 3365,
+      "title": "07CTF 2026",
+      "year": 2026,
+      "place": 83,
+      "points": 200,
+      "participants": 184,
+      "time": 1789819200,
+      "url": "https://ctftime.org/event/3365/"
+    },
+    {
+      "id": 3374,
+      "title": "BCS CTF 2026",
+      "year": 2026,
+      "place": 133,
+      "points": 1100,
+      "participants": 391,
+      "time": 1790344800,
+      "url": "https://ctftime.org/event/3374/"
+    },
+    {
+      "id": 3093,
+      "title": "H7CTF 2026 Quals",
+      "year": 2026,
+      "place": 134,
+      "points": 4269,
+      "participants": 722,
+      "time": 1790393400,
+      "url": "https://ctftime.org/event/3093/"
+    },
+    {
+      "id": 3399,
+      "title": "SunshineCTF 2026",
+      "year": 2026,
+      "place": 112,
+      "points": 9697,
+      "participants": 758,
+      "time": 1790431200,
+      "url": "https://ctftime.org/event/3399/"
+    },
+    {
+      "id": 3434,
+      "title": "CSS CTF 2026: Return of Nexus",
+      "year": 2026,
+      "place": 192,
+      "points": 1389,
+      "participants": 799,
+      "time": 1790748000,
+      "url": "https://ctftime.org/event/3434/"
+    },
+    {
+      "id": 3364,
+      "title": "Securinets CTF Quals 2026",
+      "year": 2026,
+      "place": 18,
+      "points": 4712,
+      "participants": 321,
+      "time": 1792227600,
+      "url": "https://ctftime.org/event/3364/"
+    },
+    {
+      "id": 3369,
+      "title": "cruXipher 2026 - ATMoS '26, BITS Hyderabad",
+      "year": 2026,
+      "place": 10,
+      "points": 1950,
+      "participants": 389,
+      "time": 1792715400,
+      "url": "https://ctftime.org/event/3369/"
+    },
+    {
+      "id": 3377,
+      "title": "RSTCON 2026 CTF",
+      "year": 2026,
+      "place": 16,
+      "points": 330,
+      "participants": 434,
+      "time": 1792774800,
+      "url": "https://ctftime.org/event/3377/"
+    },
+    {
+      "id": 3207,
+      "title": "Hack.lu CTF 2026",
+      "year": 2026,
+      "place": 19,
+      "points": 3108,
+      "participants": 278,
+      "time": 1792778400,
+      "url": "https://ctftime.org/event/3207/"
+    },
+    {
+      "id": 3460,
+      "title": "HI Cyber Con 2026 CTF",
+      "year": 2026,
+      "place": 179,
+      "points": 2648,
+      "participants": 1118,
+      "time": 1793368800,
+      "url": "https://ctftime.org/event/3460/"
+    }
+  ],
+  "seasons": [
+    {
+      "year": 2026,
+      "world": 136,
+      "india": 12,
+      "points": 351.299403845,
+      "events": 20
+    }
+  ],
+  "fetchedAt": "2026-11-04T09:11:33.961Z",
+  "revision": "3c70d8ccf493fec3"
+}

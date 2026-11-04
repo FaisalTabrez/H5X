@@ -1,0 +1,14 @@
+{
+  "name": "h5x-tx-wireframe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-h5x.mjs",
+    "build:offline": "node scripts/build-h5x.mjs --offline",
+    "build:pages": "node scripts/build-h5x.mjs --pages",
+    "check:site": "node scripts/check-site.mjs",
+    "sync:ctftime": "node scripts/sync-ctftime.mjs",
+    "start": "node scripts/serve-h5x.mjs",
+    "test": "node --test tests/ctftime-feed.test.mjs"
+  }
+}
