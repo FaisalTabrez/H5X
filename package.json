@@ -10,6 +10,6 @@
     "check:site": "node scripts/check-site.mjs",
     "sync:ctftime": "node scripts/sync-ctftime.mjs",
     "start": "node scripts/serve-h5x.mjs",
-    "test": "node --test tests/ctftime-feed.test.mjs"
+    "test": "node --test tests/ctftime-feed.test.mjs tests/scroll-gesture.test.mjs"
   }
 }

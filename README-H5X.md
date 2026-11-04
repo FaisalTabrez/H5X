@@ -6,6 +6,10 @@ The public website is hosted on GitHub Pages at https://faisaltabrez.github.io/H
 
 Hover or keyboard-focus the six highlighted phrases for floating previews: H5X, build, compete, hunt, show up and A growing team. The team preview introduces the listed members without implying a fixed roster size. Click/tap pins a card. Escape, close or clicking outside dismisses it. On phones, previews use a bottom card. The original ASCII renderer supports drag, scatter/reassembly, pause and reduced motion. Sound is opt-in; light/dark theme choice persists locally.
 
+All five pages have scroll-driven interactions within the current route. The page frame, menu and footer remain fixed. Scroll down/up, swipe vertically, use Page Down/Page Up or arrow keys with the main content focused, or use the visible footer controls. The home mark turns; Bug Hunt advances one research card; Hackathon and Events advance their record groups; Gallery advances individual photographs and synchronizes its thumbnail page. Existing pagination and thumbnail controls still work. Compact screens show two records per group. Overflowing content remains readable in an inner viewport before a fresh gesture advances it.
+
+One gesture advances at most once; inertia cannot skip multiple groups or carry an inner reading scroll into the next record. Scrolling never changes the page URL. Popups and photo dialogs keep their normal controls and scrolling. Motion can be paused on every page, persists locally, and respects the operating system's reduced-motion preference. Navigation continues to work when animation is disabled. Neighboring gallery photos are preloaded.
+
 ## Automatic records
 
 The official CTFtime team ID is 438630. GitHub Actions refreshes the team API and annual result API on every main-branch push, manual dispatch, and the 15-minute schedule. A successful combined record supplies world/India standings, rating points, event titles, positions, points, dates, team counts and source links. Existing events are re-read to capture corrections and removals. Only actual rated seasons from 2026 onward are displayed.
@@ -23,5 +27,7 @@ Pull-request validation has read-only repository access. The publishing build ca
 ## Validation
 
 npm test verifies H5X-only filtering, changed/removed results, stable revisions, malformed data rejection and complete refresh failure behavior. npm run check:site checks all five generated pages, project-relative assets, H5X branding, valid embedded records and the SHIELD-photo exclusion. Browser checks cover hover, popup entry, pin/close/Escape, keyboard and touch navigation, simulated feed corrections, outage fallback and phone/desktop layouts.
+
+Scroll gesture tests cover accumulated trackpad input, momentum locking, direction reversal, transition cooldown, wheel units, inner reading boundaries and bounded content navigation. Browser validation covers wheel transitions on all five pages, reverse scrolling, Page Down, last-record controls, photo enlargement, pause/resume and a 390 × 844 phone layout. Phone touch-event handling is implemented; physical touchscreen gestures were not exercised by the desktop browser tools.
 
 See NOTICE-H5X.md for upstream attribution. Source assets and gallery credit links remain included in this repository.

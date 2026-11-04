@@ -28,6 +28,8 @@ for(const file of ['index.html','bug-hunt.html','hackathon.html','events.html','
  }
 }
 const gallery=JSON.parse(await readFile(path.join(out,'gallery/credits.json'),'utf8'));
+const scrollModule=await readFile(path.join(out,'js/scroll-scenes.js'),'utf8');
+for(const [,dependency] of scrollModule.matchAll(/from ['"](\.[^'"]+)['"]/g))await access(path.resolve(out,'js',dependency));
 assert(!/shield/i.test(JSON.stringify(gallery)),'SHIELD photograph in gallery');
 const galleryPage=await readFile(path.join(out,'gallery.html'),'utf8');
 const galleryData=JSON.parse(galleryPage.match(/id="h5x-data"[^>]*>(.*?)<\/script>/s)[1]);

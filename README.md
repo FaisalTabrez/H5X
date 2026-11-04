@@ -6,6 +6,8 @@ H5X began in 2024 with hackathons and events, and formally expanded into CTFs an
 
 Five separate pages: **CTF TEAM**, **BUG HUNT**, **HACKATHON**, **EVENTS ATTENDED**, **GALLERY**. Interactive ASCII H5X mark, hover/focus previews, light/dark themes, optional sound and motion controls. The gallery contains seven photographs from Deccan CTF, z0d1ak Finals, CyberStrike and Team1, with links to the original posts. Photos are paginated in groups of three. Events Attended is a text-only list, sorted newest first, with undated meetups at the end.
 
+Scrolling animates content within each page while the menu and footer remain fixed: turn the homepage logo, advance research or record groups, and browse gallery photographs. Visible controls, keyboard navigation, pause/resume and reduced-motion support remain available. See [interaction notes](README-H5X.md#interactions).
+
 ## Publishing and record updates
 
 GitHub Pages is built and published by `.github/workflows/pages.yml` on changes to `main`, manual dispatch, and a schedule every 15 minutes (minutes 07, 22, 37 and 52 UTC). Pull requests run validation without publishing.
