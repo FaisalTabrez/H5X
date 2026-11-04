@@ -4,7 +4,7 @@
 
 H5X began in 2024 with hackathons and events, and formally expanded into CTFs and bug hunting in July 2026. A growing team of builders and security enthusiasts from Hyderabad, with members from CBIT and MGIT.
 
-Five separate pages: **CTF TEAM**, **BUG HUNT**, **HACKATHON**, **EVENTS ATTENDED**, **GALLERY**. Interactive ASCII H5X mark, hover/focus previews, light/dark themes, optional sound and motion controls. The gallery contains seven photographs from Deccan CTF, z0d1ak Finals, CyberStrike and Team1, with links to the original posts. Photos are paginated in groups of three; event thumbnails open the matching gallery photograph.
+Five separate pages: **CTF TEAM**, **BUG HUNT**, **HACKATHON**, **EVENTS ATTENDED**, **GALLERY**. Interactive ASCII H5X mark, hover/focus previews, light/dark themes, optional sound and motion controls. The gallery contains seven photographs from Deccan CTF, z0d1ak Finals, CyberStrike and Team1, with links to the original posts. Photos are paginated in groups of three. Events Attended is a text-only list, sorted newest first, with undated meetups at the end.
 
 ## Publishing and record updates
 

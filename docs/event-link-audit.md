@@ -18,3 +18,21 @@ Checked 4 November 2026. Four event arrows previously pointed to profile pages t
 All ten records are maintained in `data/h5x.json`. The homepage event preview uses those same records. `npm run check:site` rejects LinkedIn profile/search URLs in the event-source field. Team profile links elsewhere on the site remain appropriate for member profiles and are not affected by this rule.
 
 Tracking parameters have been removed. LinkedIn can still request sign-in depending on the visitor's session; the destinations are specific event posts rather than unrelated member profiles.
+
+## Chronology and hackathon credits
+
+Events are sorted newest first by their ISO date in the fifth array field. `null` marks an undated entry; those entries remain at the end. Dates are event dates rather than recap publication dates wherever established.
+
+- YC office hours: the original post says the call happened "Today". Its activity timestamp is 29 October 2026 UTC / 30 October IST. The ordering key uses 29 October; the display keeps the precision at October 2026 rather than claiming an exact local call date.
+- DevFest 2026: 24 October, verified against the [GDG organizer listing](https://gdg.community.dev/events/details/google-gdg-hyderabad-presents-devfest-hyderabad-2026/).
+- Deccan CTF: 2 October 2026, stated in the YC follow-up linked above.
+- z0d1ak Finals: 19 September 2026, official CTFtime record linked from the team results.
+- India AI Impact Summit: 16–21 February 2026, verified against the [government's post-event account](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2234343&lang=1&reg=1). Sorting uses the opening day; attendance is not claimed for every day.
+- SHIELD: 5 February 2026, verified against the [organizer agenda](https://www.shieldconference.com/conclaveagenda).
+- Assistive Technology Summit: 4 January 2026, stated in the original post.
+- DevFest 2025: 12 October, verified against the [GDG organizer recap](https://www.linkedin.com/posts/gdghyd_devfesthyd-gdghyderabad-devfest2025-activity-7411066697782054912-N9N4).
+- Team1 and PizzaDAO: no exact event date established in the retained shared source. Both are explicitly undated; the source establishes PizzaDAO happened before Team1, so that relative order is preserved.
+
+The [original Agents, Everywhere announcement by Sai Geethika Yedla](https://www.linkedin.com/feed/update/urn:li:activity:7504251435417739264/) names Vasanthadithya Mundrathi, Faisal Tabrez and Akshay Kumar Akkapally as her teammates for 12 September 2026. All four names, including the author, now appear in the hackathon credit, and the source points directly to her post. Smart India Hackathon was removed at the team's request.
+
+Event photo previews were removed at the team's request. The four Deccan/z0d1ak photographs remain in Gallery with original-post credits.

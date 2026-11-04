@@ -16,6 +16,9 @@ for(const file of ['index.html','bug-hunt.html','hackathon.html','events.html','
  }
  const data=JSON.parse(html.match(/id="h5x-data"[^>]*>(.*?)<\/script>/s)[1]);assert(validSnapshot(data.ctftime));
  if(file==='events.html'){
+  const dates=data.events.map(event=>event[4]);
+  assert(dates.every(date=>date===null||(/^\d{4}-\d{2}-\d{2}$/.test(date)&&new Date(date).toISOString().slice(0,10)===date)),'Event dates must be valid ISO dates or explicitly undated');
+  assert.deepEqual(dates,[...dates].sort((a,b)=>(b??'').localeCompare(a??'')),'Events must be newest first, with undated entries last');
   for(const event of data.events){
    const source=new URL(event[3]);assert.equal(source.protocol,'https:','Event sources must use HTTPS');
    if(source.hostname==='linkedin.com'||source.hostname.endsWith('.linkedin.com')){
@@ -32,8 +35,5 @@ for(const photo of galleryData.gallery){
  assert(/^gallery\/[a-z0-9-]+\.jpg$/.test(photo.file),'Unexpected gallery asset path');
  await access(path.join(out,photo.file));
  assert(gallery.some(credit=>`gallery/${credit.file}`===photo.file&&credit.source_post===photo.source),'Gallery photograph must have a matching original-post credit');
-}
-for(const event of galleryData.events){
- if(event[4])assert(galleryData.gallery.some(photo=>photo.file===`gallery/${event[4]}`),'Event thumbnail must open an existing gallery photograph');
 }
 console.log('Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.');

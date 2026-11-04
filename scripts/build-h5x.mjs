@@ -11,6 +11,9 @@ const feedConfig={mode:pagesMode?'pages':'local',refreshMinutes:pagesMode?15:5,o
 if(!OUT.startsWith(ROOT+path.sep)||path.basename(OUT)!=='out')throw Error('Unexpected build output path');
 const pages=[['index.html','ctf','CTF TEAM'],['bug-hunt.html','bugs','BUG HUNT'],['hackathon.html','hackathon','HACKATHON'],['events.html','events','EVENTS ATTENDED'],['gallery.html','gallery','GALLERY']];
 const data=JSON.parse(await readFile(path.join(ROOT,'data/h5x.json'),'utf8'));
+// ISO event dates keep the page and homepage preview in the same newest-first order.
+// Null dates remain after dated entries, preserving their known relative order.
+data.events.sort((a,b)=>(b[4]??'').localeCompare(a[4]??''));
 data.ctftime=await readSnapshot(path.join(ROOT,'data/ctftime-live.json'));
 if(!data.ctftime)throw Error('No verified CTFtime snapshot. Run npm run sync:ctftime first.');
 const shell=await readFile(path.join(ROOT,'src/shell.html'),'utf8');
