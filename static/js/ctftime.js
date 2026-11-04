@@ -23,7 +23,7 @@
      if(payload.data)accept(payload.data);else throw Error('No verified CTFtime record');return;
     }
    }
-   const response=await fetch('ctftime.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});
+   const response=await fetch(config.feedUrl||'ctftime.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});
    if(!response.ok)throw Error('Snapshot unavailable');const payload=await response.json();
    if(payload.mode==='pages'){mode='pages';healthy=payload.ok===true;accept(payload.data);}else{mode='snapshot';healthy=true;accept(payload);}
   }catch{healthy=false;notify();}finally{busy=false;}

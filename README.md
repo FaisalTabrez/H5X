@@ -18,6 +18,12 @@ Changed records are saved to `data/ctftime-live.json`. A daily verification time
 
 Scheduled runs can be delayed by GitHub; this is scheduled refresh, not an instantaneous push subscription. Run **Actions → Publish H5X and refresh CTFtime → Run workflow** for an immediate check.
 
+## Vercel
+
+Import this repository into Vercel with the **Other** preset and repository root. `vercel.json` declares the validated build command and `out` output directory. Main-branch pushes automatically redeploy the connected project.
+
+Vercel serves the same scheduled record through `/records/ctftime.json`, a no-store rewrite to the GitHub Pages feed. The UI refreshes that record every minute, so the existing 15-minute GitHub Actions updater works on both hosts without a Vercel cron job or additional credentials. If the feed is unavailable, the validated build-time record remains visible with its verification time.
+
 ## Local development
 
 Node.js 20 or newer; no dependencies need installing.

@@ -6,6 +6,7 @@
     "build": "node scripts/build-h5x.mjs",
     "build:offline": "node scripts/build-h5x.mjs --offline",
     "build:pages": "node scripts/build-h5x.mjs --pages",
+    "build:vercel": "node scripts/build-h5x.mjs --vercel",
     "check:site": "node scripts/check-site.mjs",
     "sync:ctftime": "node scripts/sync-ctftime.mjs",
     "start": "node scripts/serve-h5x.mjs",

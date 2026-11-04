@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm test && npm run build:vercel && npm run check:site",
+  "outputDirectory": "out",
+  "rewrites": [
+    {
+      "source": "/records/ctftime.json",
+      "destination": "https://faisaltabrez.github.io/H5X/ctftime.json"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/records/ctftime.json",
+      "headers": [
+        {"key": "Cache-Control", "value": "no-store"},
+        {"key": "CDN-Cache-Control", "value": "no-store"},
+        {"key": "x-vercel-enable-rewrite-caching", "value": "0"}
+      ]
+    }
+  ]
+}
