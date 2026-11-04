@@ -306,7 +306,7 @@
   window.H5XViews.set('home',{target:box,state:()=>({index:scrollTurn,total:null}),next(direction){
     if(still.matches||window.h5xMotionPaused)return false;
     scrollTurn+=direction;box.dataset.scrollTurn=String(scrollTurn);
-    turnVel+=direction*0.035;userSpin=true;tickAt=turn;kick();
+    turnVel=direction*Math.max(0.035,Math.abs(turnVel));userSpin=true;tickAt=turn;kick();
     window.H5XMotion.changed('home');return true;
   }});
   new ResizeObserver(() => { if(box.clientWidth){size();kick();} }).observe(box);

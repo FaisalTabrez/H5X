@@ -6,10 +6,11 @@ body.motion-ready{height:100svh;min-height:0;overflow:hidden;grid-template-rows:
 .scroll-controls{flex-basis:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:0 0 10px;margin-bottom:4px;color:var(--dim);font-size:11px}
 .scroll-invitation{display:flex;align-items:center;gap:11px;line-height:1.5}
 .scroll-arrow{color:var(--acc);font-size:18px;animation:scroll-cue 2.3s ease-in-out infinite}
-.scroll-actions{display:flex;align-items:center;gap:14px;flex:none}
-.scroll-actions button{border:1px solid var(--line);border-radius:50%;width:32px;height:32px;min-height:32px;padding:0;font-size:16px;color:var(--ink);transition:border-color .2s,color .2s}
-.scroll-actions button:hover:not(:disabled){border-color:var(--acc);color:var(--acc)}
-[data-scroll-count]{min-width:65px;text-align:center;white-space:nowrap}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.motion-deck{position:relative;isolation:isolate;overflow:clip}
+.motion-layer{display:block;width:100%}
+.motion-deck[data-moving]>.motion-layer{position:absolute;inset:0 auto auto 0;will-change:transform,opacity}
+.motion-layer[aria-hidden=true]{pointer-events:none}
 .motion-ready .research-list .research{min-height:250px;align-items:center;border-bottom:1px solid var(--line);padding-block:32px}
 .motion-ready .research-list .research-number{font-size:62px}
 .motion-ready .research-list .research h2{font-size:32px;margin-bottom:16px}
@@ -35,7 +36,6 @@ body.motion-ready{height:100svh;min-height:0;overflow:hidden;grid-template-rows:
  .motion-ready .gallery-note{font-size:21px;margin-bottom:15px;max-width:360px}
  .motion-ready .photo-choice{padding-block:10px}.motion-ready .photo-choice img{height:43px}
  .motion-ready .gallery-credit{margin-top:12px;font-size:10px}
- .motion-ready .pager{padding-top:9px}.motion-ready .pager button{min-height:30px}
 }
 @media(max-width:760px){
  .motion-ready .header{padding-block:12px;gap:6px 15px}
@@ -45,9 +45,7 @@ body.motion-ready{height:100svh;min-height:0;overflow:hidden;grid-template-rows:
  .motion-ready .footer-center{order:0;flex-basis:auto;gap:14px}
  .motion-ready #clock{display:none}
  .scroll-controls{gap:12px;font-size:10px;padding-bottom:8px}
- .scroll-invitation{gap:7px;max-width:210px}.scroll-actions{gap:7px}
- .scroll-actions button{width:32px;min-height:32px}
- [data-scroll-count]{min-width:48px;font-size:9px}
+ .scroll-invitation{gap:7px;max-width:none}
  .motion-ready .editorial-layout{gap:22px}.motion-ready .page-title{font-size:37px;margin-block:12px}
  .motion-ready .page-intro p{font-size:17px;margin-block:10px}.motion-ready .page-intro p.muted{font-size:13px;line-height:1.5}
  .motion-ready .text-link{margin-top:3px}
@@ -57,5 +55,5 @@ body.motion-ready{height:100svh;min-height:0;overflow:hidden;grid-template-rows:
  .motion-ready .gallery-heading .page-title{font-size:35px}.motion-ready .gallery-count{margin-top:12px}
  .motion-ready .gallery-layout{gap:22px}.motion-ready .featured-photo img{max-height:34svh}
 }
-@media(prefers-reduced-motion:reduce){.scroll-arrow{animation:none}.scroll-actions button{transition:none}}
+@media(prefers-reduced-motion:reduce){.scroll-arrow{animation:none}}
 .no-motion .scroll-arrow{animation:none}

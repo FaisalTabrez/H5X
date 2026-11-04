@@ -13,6 +13,13 @@ test('a long momentum tail cannot skip several pages',()=>{
 test('a reversal clears accumulated movement and scroll-up moves backward',()=>{
  const g=new ScrollGesture();assert.equal(g.push(60,0),0);assert.equal(g.push(-20,30),0);assert.equal(g.push(-60,60),-1);
 });
+test('an opposite gesture reverses immediately during momentum lock and cooldown',()=>{
+ const g=new ScrollGesture();assert.equal(g.push(100,0),1);assert.equal(g.push(-40,25),-1);assert.equal(g.push(40,50),1);
+});
+test('tiny opposite noise does not reverse until it becomes deliberate',()=>{
+ const g=new ScrollGesture();assert.equal(g.push(100,0),1);assert.equal(g.push(-8,20),0);assert.equal(g.push(20,30),0);
+ assert.equal(g.push(-16,40),0);assert.equal(g.push(-20,60),-1);
+});
 test('fresh input during the transition cooldown cannot advance again',()=>{
  const g=new ScrollGesture();assert.equal(g.push(100,0),1);assert.equal(g.push(100,250),0);assert.equal(g.push(100,700),1);
 });

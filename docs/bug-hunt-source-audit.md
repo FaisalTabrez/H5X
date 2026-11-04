@@ -28,4 +28,4 @@ Personal health details and private report contents are unnecessary to the websi
 
 Older reviewed posts chiefly describe CTFs, Wiz/AI Odyssey labs, certificates, HCode tooling and third-party security news. Lab solves, development projects, and reposts about other researchers' CVEs are not presented as H5X bounty disclosures. No additional completed bounty program was established in that reviewed material.
 
-The site keeps its team voice while separately crediting Vasanthadithya for the three individual disclosure records. Terrier credits both teammates. The homepage Hunt preview reflects the same four outcomes, and the existing scroll/pagination controls automatically include all four cards.
+The site keeps its team voice while separately crediting Vasanthadithya for the three individual disclosure records. Terrier credits both teammates. The homepage Hunt preview reflects the same four outcomes, and the scroll navigation includes all four cards.
