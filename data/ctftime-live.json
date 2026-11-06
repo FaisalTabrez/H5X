@@ -204,6 +204,16 @@
       "participants": 1118,
       "time": 1793368800,
       "url": "https://ctftime.org/event/3460/"
+    },
+    {
+      "id": 3459,
+      "title": "2026 Qiangwang Challenge on Cyber Mimic Defense Qualification",
+      "year": 2026,
+      "place": 172,
+      "points": 4648,
+      "participants": 287,
+      "time": 1793412000,
+      "url": "https://ctftime.org/event/3459/"
     }
   ],
   "seasons": [
@@ -212,9 +222,9 @@
       "world": 136,
       "india": 12,
       "points": 351.299403845,
-      "events": 20
+      "events": 21
     }
   ],
-  "fetchedAt": "2026-11-05T10:44:25.472Z",
-  "revision": "3c70d8ccf493fec3"
+  "fetchedAt": "2026-11-06T11:37:33.601Z",
+  "revision": "6d67e0a83be0a31b"
 }
