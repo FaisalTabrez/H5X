@@ -219,12 +219,12 @@
   "seasons": [
     {
       "year": 2026,
-      "world": 136,
+      "world": 137,
       "india": 12,
       "points": 351.299403845,
       "events": 21
     }
   ],
-  "fetchedAt": "2026-11-07T16:36:35.972Z",
-  "revision": "6d67e0a83be0a31b"
+  "fetchedAt": "2026-11-08T18:03:51.664Z",
+  "revision": "30be46fd6fdbcef2"
 }
