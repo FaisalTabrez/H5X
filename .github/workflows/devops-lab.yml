@@ -1,0 +1,77 @@
+name: H5X DevOps Lab
+on:
+  push:
+    branches: [devops/h5x-lab-project]
+    paths-ignore: ['devops/evidence/**', 'devops/report/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: devops-lab-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Unit tests and static website
+        run: |
+          npm test
+          npm run build:pages
+          npm run check:site
+      - name: Build the Docker image
+        run: docker build --progress=plain -t h5x-devops:ci .
+      - name: Start isolated acceptance environment
+        run: |
+          docker network create h5x-ci
+          docker run -d --name h5x-web --network h5x-ci -p 127.0.0.1:18081:8080 h5x-devops:ci
+          docker run -d --name h5x-selenium --network h5x-ci --shm-size=1g -p 127.0.0.1:4444:4444 selenium/standalone-chromium:latest
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:4444/status | grep -q '"ready": true'; then exit 0; fi
+            sleep 2
+          done
+          docker logs h5x-selenium
+          exit 1
+      - name: Selenium browser acceptance tests
+        env:
+          BASE_URL: http://h5x-web:8080
+          SELENIUM_REMOTE_URL: http://127.0.0.1:4444
+        run: |
+          python -m pip install -r devops/requirements.txt
+          python -m pytest tests/selenium -v -s --junitxml=reports/selenium/junit.xml
+      - name: Create a local Kubernetes cluster
+        run: |
+          curl -fsSL https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64 -o kind
+          chmod +x kind
+          ./kind create cluster --name h5x-devops --config devops/kind.yaml --image kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5 --wait 120s
+          ./kind load docker-image h5x-devops:ci --name h5x-devops
+      - name: Deploy and verify Kubernetes
+        run: |
+          mkdir -p reports/kubernetes
+          kubectl kustomize k8s | sed 's|h5x-devops:local|h5x-devops:ci|g' > reports/kubernetes/rendered.yaml
+          kubectl --context kind-h5x-devops apply -f reports/kubernetes/rendered.yaml
+          kubectl --context kind-h5x-devops -n h5x-devops rollout status deployment/h5x --timeout=120s
+          kubectl --context kind-h5x-devops -n h5x-devops get deployments,pods,services -o wide | tee reports/kubernetes/resources.txt
+          curl --fail --retry 12 --retry-delay 2 --retry-all-errors http://127.0.0.1:18088/healthz
+      - name: Upload browser and deployment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h5x-devops-evidence
+          path: reports/
+          retention-days: 14
+      - name: Clean up the temporary lab
+        if: always()
+        run: |
+          docker rm -f h5x-web h5x-selenium || true
+          if [ -x ./kind ]; then ./kind delete cluster --name h5x-devops; fi

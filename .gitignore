@@ -4,3 +4,9 @@ node_modules/
 .env
 .env.*
 .DS_Store
+reports/
+__pycache__/
+.pytest_cache/
+kind
+kind.exe
+.lab-private/

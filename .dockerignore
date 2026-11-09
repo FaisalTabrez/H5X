@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+out
+reports
+devops/evidence
+devops/report
+**/__pycache__
+**/.pytest_cache
+*.pdf
+*.zip
