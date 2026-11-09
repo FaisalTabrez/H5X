@@ -1,0 +1,791 @@
+verify	Set up job	﻿2026-11-09T18:23:11.3955301Z Current runner version: '2.338.2'
+verify	Set up job	2026-11-09T18:23:11.3981080Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-11-09T18:23:11.3981930Z Hosted Compute Agent
+verify	Set up job	2026-11-09T18:23:11.3982534Z Version: 20261028.624
+verify	Set up job	2026-11-09T18:23:11.3983122Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+verify	Set up job	2026-11-09T18:23:11.3984145Z Build Date: 2026-10-28T21:51:42Z
+verify	Set up job	2026-11-09T18:23:11.3984828Z Worker ID: {2368075d-e8fc-4099-936e-5d9123a6a3b3}
+verify	Set up job	2026-11-09T18:23:11.3985497Z Region: eastus3
+verify	Set up job	2026-11-09T18:23:11.3986058Z Cloud: Azure
+verify	Set up job	2026-11-09T18:23:11.3986627Z ##[endgroup]
+verify	Set up job	2026-11-09T18:23:11.3989606Z ##[group]Operating System
+verify	Set up job	2026-11-09T18:23:11.3990676Z Ubuntu
+verify	Set up job	2026-11-09T18:23:11.3991433Z 26.04.1
+verify	Set up job	2026-11-09T18:23:11.3992250Z LTS
+verify	Set up job	2026-11-09T18:23:11.3993068Z ##[endgroup]
+verify	Set up job	2026-11-09T18:23:11.3994034Z ##[group]Runner Image
+verify	Set up job	2026-11-09T18:23:11.3995540Z Image: ubuntu-26.04
+verify	Set up job	2026-11-09T18:23:11.3996500Z Version: 20261101.186.1
+verify	Set up job	2026-11-09T18:23:11.3998615Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+verify	Set up job	2026-11-09T18:23:11.4001102Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+verify	Set up job	2026-11-09T18:23:11.4002685Z ##[endgroup]
+verify	Set up job	2026-11-09T18:23:11.4004242Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-11-09T18:23:11.4007035Z Contents: read
+verify	Set up job	2026-11-09T18:23:11.4007927Z Metadata: read
+verify	Set up job	2026-11-09T18:23:11.4008501Z ##[endgroup]
+verify	Set up job	2026-11-09T18:23:11.4010692Z Secret source: Actions
+verify	Set up job	2026-11-09T18:23:11.4011560Z Cache mode: write
+verify	Set up job	2026-11-09T18:23:11.4012291Z Prepare workflow directory
+verify	Set up job	2026-11-09T18:23:11.4484510Z Prepare all required actions
+verify	Set up job	2026-11-09T18:23:11.4559040Z Getting action download info
+verify	Set up job	2026-11-09T18:23:11.6942513Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+verify	Set up job	2026-11-09T18:23:11.8460688Z Download action repository 'actions/setup-node@v6' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+verify	Set up job	2026-11-09T18:23:11.8976034Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+verify	Set up job	2026-11-09T18:23:11.9639473Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-11-09T18:23:12.1325308Z Complete job name: verify
+verify	Run actions/checkout@v6	﻿2026-11-09T18:23:12.2243854Z ##[group]Run actions/checkout@v6
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2244644Z with:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2245059Z   repository: FaisalTabrez/H5X
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2248739Z   token: ***
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2249129Z   ssh-strict: true
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2249530Z   ssh-user: git
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2249927Z   persist-credentials: true
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2250394Z   clean: true
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2250793Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2251256Z   fetch-depth: 1
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2251643Z   fetch-tags: false
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2252039Z   show-progress: true
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2252440Z   lfs: false
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2252804Z   submodules: false
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2253210Z   set-safe-directory: true
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2253658Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.2254403Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5569279Z Syncing repository: FaisalTabrez/H5X
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5573100Z ##[group]Getting Git version info
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5574051Z Working directory is '/home/runner/work/H5X/H5X'
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5576352Z [command]/usr/bin/git version
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5623403Z git version 2.56.0
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5660040Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5685079Z Temporarily overriding HOME='/home/runner/work/_temp/35ebba1a-b76c-4fa9-a4e8-bf8fc17b29b7' before making global git config changes
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5687899Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5712015Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/H5X/H5X
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5822188Z Deleting the contents of '/home/runner/work/H5X/H5X'
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5836405Z ##[group]Determining repository object format
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5838474Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5848288Z ##[group]Initializing the repository
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5850483Z [command]/usr/bin/git init /home/runner/work/H5X/H5X
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5994511Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5996974Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.5998996Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6000641Z hint: call:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6001394Z hint:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6002328Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6003633Z hint:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6004669Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6006412Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6007876Z hint:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6008598Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6009468Z hint:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6010561Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6012295Z Initialized empty Git repository in /home/runner/work/H5X/H5X/.git/
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6020568Z [command]/usr/bin/git remote add origin https://github.com/FaisalTabrez/H5X
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6074539Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6075337Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6080565Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6115089Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6116564Z ##[group]Setting up auth
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6117793Z Removing SSH command configuration
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6124209Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6164187Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6635142Z Removing HTTP extra header
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6643887Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6680551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6915438Z Removing includeIf entries pointing to credentials config files
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6924473Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.6960590Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7194860Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7234080Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/H5X/H5X/.git.path /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7267543Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/H5X/H5X/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7303777Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7340467Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7365447Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7366296Z ##[group]Fetching the repository
+verify	Run actions/checkout@v6	2026-11-09T18:23:12.7373676Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5c4d3af21c37617d5e3643ba0185b0d466ad8d2b:refs/remotes/origin/devops/h5x-lab-project
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1036361Z From https://github.com/FaisalTabrez/H5X
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1040468Z  * [new ref]         5c4d3af21c37617d5e3643ba0185b0d466ad8d2b -> origin/devops/h5x-lab-project
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1046002Z [command]/usr/bin/git branch --list --remote origin/devops/h5x-lab-project
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1071017Z   origin/devops/h5x-lab-project
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1082824Z [command]/usr/bin/git rev-parse refs/remotes/origin/devops/h5x-lab-project
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1103580Z 5c4d3af21c37617d5e3643ba0185b0d466ad8d2b
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1108912Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1111558Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1114410Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1116264Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1167061Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1199377Z ##[group]Checking out the ref
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1203333Z [command]/usr/bin/git checkout --progress --force -B devops/h5x-lab-project refs/remotes/origin/devops/h5x-lab-project
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1345851Z Switched to a new branch 'devops/h5x-lab-project'
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1350001Z branch 'devops/h5x-lab-project' set up to track 'origin/devops/h5x-lab-project'.
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1357116Z ##[endgroup]
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1401334Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v6	2026-11-09T18:23:13.1428950Z 5c4d3af21c37617d5e3643ba0185b0d466ad8d2b
+verify	Run actions/setup-node@v6	﻿2026-11-09T18:23:13.1812129Z ##[group]Run actions/setup-node@v6
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.1813337Z with:
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.1814541Z   node-version: 22
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.1815529Z   check-latest: false
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.1827576Z   token: ***
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.1828552Z   package-manager-cache: true
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.1829537Z ##[endgroup]
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.3423805Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.3425503Z ##[group]Environment details
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.7818979Z node: v22.23.4
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.7820069Z npm: 10.9.9
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.7821113Z yarn: 1.22.22
+verify	Run actions/setup-node@v6	2026-11-09T18:23:13.7822507Z ##[endgroup]
+verify	Run actions/setup-python@v6	﻿2026-11-09T18:23:13.7983165Z ##[group]Run actions/setup-python@v6
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7983713Z with:
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7984113Z   python-version: 3.12
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7984539Z   check-latest: false
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7987739Z   token: ***
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7988173Z   update-environment: true
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7988639Z   allow-prereleases: false
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7989084Z   freethreaded: false
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.7989516Z ##[endgroup]
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.9276819Z ##[group]Installed versions
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.9410422Z Successfully set up CPython (3.12.16)
+verify	Run actions/setup-python@v6	2026-11-09T18:23:13.9412082Z ##[endgroup]
+verify	Unit tests and static website	﻿2026-11-09T18:23:13.9590611Z ##[group]Run npm test
+verify	Unit tests and static website	2026-11-09T18:23:13.9591464Z ^[[36;1mnpm test^[[0m
+verify	Unit tests and static website	2026-11-09T18:23:13.9592143Z ^[[36;1mnpm run build:pages^[[0m
+verify	Unit tests and static website	2026-11-09T18:23:13.9592865Z ^[[36;1mnpm run check:site^[[0m
+verify	Unit tests and static website	2026-11-09T18:23:13.9713000Z shell: /usr/bin/bash -e {0}
+verify	Unit tests and static website	2026-11-09T18:23:13.9713557Z env:
+verify	Unit tests and static website	2026-11-09T18:23:13.9714055Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Unit tests and static website	2026-11-09T18:23:13.9714766Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Unit tests and static website	2026-11-09T18:23:13.9715427Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Unit tests and static website	2026-11-09T18:23:13.9716035Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Unit tests and static website	2026-11-09T18:23:13.9716647Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Unit tests and static website	2026-11-09T18:23:13.9717265Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Unit tests and static website	2026-11-09T18:23:13.9718035Z ##[endgroup]
+verify	Unit tests and static website	2026-11-09T18:23:14.0905974Z 
+verify	Unit tests and static website	2026-11-09T18:23:14.0906888Z > test
+verify	Unit tests and static website	2026-11-09T18:23:14.0908615Z > node --test tests/ctftime-feed.test.mjs tests/scroll-gesture.test.mjs
+verify	Unit tests and static website	2026-11-09T18:23:14.0909708Z 
+verify	Unit tests and static website	2026-11-09T18:23:14.1419206Z TAP version 13
+verify	Unit tests and static website	2026-11-09T18:23:14.1899488Z # Subtest: only H5X results and real rated seasons are included
+verify	Unit tests and static website	2026-11-09T18:23:14.1901851Z ok 1 - only H5X results and real rated seasons are included
+verify	Unit tests and static website	2026-11-09T18:23:14.1923401Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1928884Z   duration_ms: 2.228367
+verify	Unit tests and static website	2026-11-09T18:23:14.1930284Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1930960Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1932224Z # Subtest: revised placements, titles, points, ranks and deleted events replace the prior record
+verify	Unit tests and static website	2026-11-09T18:23:14.1933760Z ok 2 - revised placements, titles, points, ranks and deleted events replace the prior record
+verify	Unit tests and static website	2026-11-09T18:23:14.1934832Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1935509Z   duration_ms: 0.501899
+verify	Unit tests and static website	2026-11-09T18:23:14.1936229Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1936911Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1938121Z # Subtest: the record revision is stable when only the check time changes
+verify	Unit tests and static website	2026-11-09T18:23:14.1939576Z ok 3 - the record revision is stable when only the check time changes
+verify	Unit tests and static website	2026-11-09T18:23:14.1940624Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1941340Z   duration_ms: 0.280632
+verify	Unit tests and static website	2026-11-09T18:23:14.1942077Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1942800Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1943809Z # Subtest: wrong team IDs and malformed result places are rejected
+verify	Unit tests and static website	2026-11-09T18:23:14.1945182Z ok 4 - wrong team IDs and malformed result places are rejected
+verify	Unit tests and static website	2026-11-09T18:23:14.1946138Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1946801Z   duration_ms: 0.684829
+verify	Unit tests and static website	2026-11-09T18:23:14.1947688Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1948343Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1949632Z # Subtest: a failed annual request rejects the entire refresh instead of mixing new ranks with old events
+verify	Unit tests and static website	2026-11-09T18:23:14.1951437Z ok 5 - a failed annual request rejects the entire refresh instead of mixing new ranks with old events
+verify	Unit tests and static website	2026-11-09T18:23:14.1952609Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1953306Z   duration_ms: 0.81866
+verify	Unit tests and static website	2026-11-09T18:23:14.1954048Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1954681Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1980069Z # Subtest: small trackpad movements accumulate into one deliberate step
+verify	Unit tests and static website	2026-11-09T18:23:14.1981718Z ok 6 - small trackpad movements accumulate into one deliberate step
+verify	Unit tests and static website	2026-11-09T18:23:14.1982999Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1983858Z   duration_ms: 0.945005
+verify	Unit tests and static website	2026-11-09T18:23:14.1984652Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1985354Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1986395Z # Subtest: a long momentum tail cannot skip several pages
+verify	Unit tests and static website	2026-11-09T18:23:14.1987838Z ok 7 - a long momentum tail cannot skip several pages
+verify	Unit tests and static website	2026-11-09T18:23:14.1988777Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1989520Z   duration_ms: 0.238098
+verify	Unit tests and static website	2026-11-09T18:23:14.1990289Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1991007Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1992169Z # Subtest: a reversal clears accumulated movement and scroll-up moves backward
+verify	Unit tests and static website	2026-11-09T18:23:14.1993748Z ok 8 - a reversal clears accumulated movement and scroll-up moves backward
+verify	Unit tests and static website	2026-11-09T18:23:14.1994807Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.1995531Z   duration_ms: 0.938441
+verify	Unit tests and static website	2026-11-09T18:23:14.1996311Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.1997600Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.1998745Z # Subtest: an opposite gesture reverses immediately during momentum lock and cooldown
+verify	Unit tests and static website	2026-11-09T18:23:14.2000226Z ok 9 - an opposite gesture reverses immediately during momentum lock and cooldown
+verify	Unit tests and static website	2026-11-09T18:23:14.2001282Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.2001976Z   duration_ms: 0.14821
+verify	Unit tests and static website	2026-11-09T18:23:14.2002667Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.2003315Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.2004363Z # Subtest: tiny opposite noise does not reverse until it becomes deliberate
+verify	Unit tests and static website	2026-11-09T18:23:14.2005789Z ok 10 - tiny opposite noise does not reverse until it becomes deliberate
+verify	Unit tests and static website	2026-11-09T18:23:14.2006803Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.2007651Z   duration_ms: 0.127276
+verify	Unit tests and static website	2026-11-09T18:23:14.2008593Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.2009261Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.2010742Z # Subtest: fresh input during the transition cooldown cannot advance again
+verify	Unit tests and static website	2026-11-09T18:23:14.2012151Z ok 11 - fresh input during the transition cooldown cannot advance again
+verify	Unit tests and static website	2026-11-09T18:23:14.2013117Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.2013851Z   duration_ms: 0.104757
+verify	Unit tests and static website	2026-11-09T18:23:14.2014710Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.2015512Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.2016512Z # Subtest: pixel, line and page wheel units normalize consistently
+verify	Unit tests and static website	2026-11-09T18:23:14.2017974Z ok 12 - pixel, line and page wheel units normalize consistently
+verify	Unit tests and static website	2026-11-09T18:23:14.2019296Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.2019922Z   duration_ms: 0.203678
+verify	Unit tests and static website	2026-11-09T18:23:14.2020714Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.2021428Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.2022686Z # Subtest: finishing an inner text scroll does not advance on its remaining momentum
+verify	Unit tests and static website	2026-11-09T18:23:14.2024287Z ok 13 - finishing an inner text scroll does not advance on its remaining momentum
+verify	Unit tests and static website	2026-11-09T18:23:14.2025353Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.2026155Z   duration_ms: 0.129988
+verify	Unit tests and static website	2026-11-09T18:23:14.2026985Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.2027973Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.2029267Z # Subtest: content stepping stops at the ends instead of changing routes or wrapping
+verify	Unit tests and static website	2026-11-09T18:23:14.2030869Z ok 14 - content stepping stops at the ends instead of changing routes or wrapping
+verify	Unit tests and static website	2026-11-09T18:23:14.2031900Z   ---
+verify	Unit tests and static website	2026-11-09T18:23:14.2032526Z   duration_ms: 0.341802
+verify	Unit tests and static website	2026-11-09T18:23:14.2033167Z   type: 'test'
+verify	Unit tests and static website	2026-11-09T18:23:14.2033803Z   ...
+verify	Unit tests and static website	2026-11-09T18:23:14.2034522Z 1..14
+verify	Unit tests and static website	2026-11-09T18:23:14.2035120Z # tests 14
+verify	Unit tests and static website	2026-11-09T18:23:14.2035731Z # suites 0
+verify	Unit tests and static website	2026-11-09T18:23:14.2036347Z # pass 14
+verify	Unit tests and static website	2026-11-09T18:23:14.2036970Z # fail 0
+verify	Unit tests and static website	2026-11-09T18:23:14.2037758Z # cancelled 0
+verify	Unit tests and static website	2026-11-09T18:23:14.2038456Z # skipped 0
+verify	Unit tests and static website	2026-11-09T18:23:14.2039099Z # todo 0
+verify	Unit tests and static website	2026-11-09T18:23:14.2039791Z # duration_ms 72.379214
+verify	Unit tests and static website	2026-11-09T18:23:14.3101806Z 
+verify	Unit tests and static website	2026-11-09T18:23:14.3102645Z > build:pages
+verify	Unit tests and static website	2026-11-09T18:23:14.3103292Z > node scripts/build-h5x.mjs --pages
+verify	Unit tests and static website	2026-11-09T18:23:14.3103645Z 
+verify	Unit tests and static website	2026-11-09T18:23:14.3766751Z Built five H5X pages in /home/runner/work/H5X/H5X/out using the researched local snapshot.
+verify	Unit tests and static website	2026-11-09T18:23:14.4794859Z 
+verify	Unit tests and static website	2026-11-09T18:23:14.4795839Z > check:site
+verify	Unit tests and static website	2026-11-09T18:23:14.4796702Z > node scripts/check-site.mjs
+verify	Unit tests and static website	2026-11-09T18:23:14.4797288Z 
+verify	Unit tests and static website	2026-11-09T18:23:14.5362557Z Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.
+verify	Build the Docker image	﻿2026-11-09T18:23:14.5487807Z ##[group]Run docker build --progress=plain -t h5x-devops:ci .
+verify	Build the Docker image	2026-11-09T18:23:14.5488391Z ^[[36;1mdocker build --progress=plain -t h5x-devops:ci .^[[0m
+verify	Build the Docker image	2026-11-09T18:23:14.5519831Z shell: /usr/bin/bash -e {0}
+verify	Build the Docker image	2026-11-09T18:23:14.5520185Z env:
+verify	Build the Docker image	2026-11-09T18:23:14.5520522Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Build the Docker image	2026-11-09T18:23:14.5521020Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Build the Docker image	2026-11-09T18:23:14.5521511Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Build the Docker image	2026-11-09T18:23:14.5521948Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Build the Docker image	2026-11-09T18:23:14.5522380Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Build the Docker image	2026-11-09T18:23:14.5522829Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Build the Docker image	2026-11-09T18:23:14.5523201Z ##[endgroup]
+verify	Build the Docker image	2026-11-09T18:23:16.7259579Z #0 building with "default" instance using docker driver
+verify	Build the Docker image	2026-11-09T18:23:16.7260235Z 
+verify	Build the Docker image	2026-11-09T18:23:16.7261222Z #1 [internal] load build definition from Dockerfile
+verify	Build the Docker image	2026-11-09T18:23:16.7262081Z #1 transferring dockerfile: 613B 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:16.7262510Z #1 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:16.7262707Z 
+verify	Build the Docker image	2026-11-09T18:23:16.7263368Z #2 [auth] nginxinc/nginx-unprivileged:pull token for registry-1.docker.io
+verify	Build the Docker image	2026-11-09T18:23:16.8766096Z #2 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:16.8766601Z 
+verify	Build the Docker image	2026-11-09T18:23:16.8767694Z #3 [auth] library/node:pull token for registry-1.docker.io
+verify	Build the Docker image	2026-11-09T18:23:16.8768230Z #3 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:16.8768406Z 
+verify	Build the Docker image	2026-11-09T18:23:16.8768743Z #4 [internal] load metadata for docker.io/library/node:22-alpine
+verify	Build the Docker image	2026-11-09T18:23:17.1263852Z #4 DONE 0.5s
+verify	Build the Docker image	2026-11-09T18:23:17.1264235Z 
+verify	Build the Docker image	2026-11-09T18:23:17.1264865Z #5 [internal] load metadata for docker.io/nginxinc/nginx-unprivileged:stable-alpine
+verify	Build the Docker image	2026-11-09T18:23:17.2269426Z #5 DONE 0.5s
+verify	Build the Docker image	2026-11-09T18:23:17.2269747Z 
+verify	Build the Docker image	2026-11-09T18:23:17.2269935Z #6 [internal] load .dockerignore
+verify	Build the Docker image	2026-11-09T18:23:17.2270338Z #6 transferring context: 152B done
+verify	Build the Docker image	2026-11-09T18:23:17.2270720Z #6 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:17.2270933Z 
+verify	Build the Docker image	2026-11-09T18:23:17.2271157Z #7 [internal] load build context
+verify	Build the Docker image	2026-11-09T18:23:17.2271764Z #7 transferring context: 1.46MB 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.2272547Z #7 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:17.2272765Z 
+verify	Build the Docker image	2026-11-09T18:23:17.2273881Z #8 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+verify	Build the Docker image	2026-11-09T18:23:17.2275782Z #8 resolve docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.2276706Z #8 DONE 0.1s
+verify	Build the Docker image	2026-11-09T18:23:17.2276921Z 
+verify	Build the Docker image	2026-11-09T18:23:17.2277779Z #9 [build 1/8] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+verify	Build the Docker image	2026-11-09T18:23:17.2374549Z #9 resolve docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.3346187Z #9 sha256:071409a402546fea9e56af710d951a9e0c9bb205e4b1186811677d2c9dcad115 443B / 443B 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.3357111Z #9 sha256:df11f9b3da94f640e357ccc86df09a574dc04df1ad95e012f511f4a02b566cd3 1.26MB / 1.26MB 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:17.3359779Z #9 sha256:881fc932939efef04ca120ad44bbd2c0917851eb247aa4995428afb1e80ede17 3.85MB / 3.85MB 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:17.3361236Z #9 extracting sha256:881fc932939efef04ca120ad44bbd2c0917851eb247aa4995428afb1e80ede17
+verify	Build the Docker image	2026-11-09T18:23:17.4366670Z #9 extracting sha256:881fc932939efef04ca120ad44bbd2c0917851eb247aa4995428afb1e80ede17 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:17.4368216Z #9 sha256:2a9491572f6e8f9c3be47a2d17b7dcd30f264003f2cbeedf9359544b3ca5396c 15.73MB / 56.22MB 0.2s
+verify	Build the Docker image	2026-11-09T18:23:17.5389344Z #9 sha256:2a9491572f6e8f9c3be47a2d17b7dcd30f264003f2cbeedf9359544b3ca5396c 56.22MB / 56.22MB 0.3s done
+verify	Build the Docker image	2026-11-09T18:23:17.7415781Z #9 extracting sha256:2a9491572f6e8f9c3be47a2d17b7dcd30f264003f2cbeedf9359544b3ca5396c
+verify	Build the Docker image	2026-11-09T18:23:17.8945991Z #9 ...
+verify	Build the Docker image	2026-11-09T18:23:17.8946332Z 
+verify	Build the Docker image	2026-11-09T18:23:17.8947567Z #8 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+verify	Build the Docker image	2026-11-09T18:23:17.8950065Z #8 sha256:911bd3a49d26bae1ce395def8d5e3c2b306275ffbbfd47355bac30d2e095935e 1.40kB / 1.40kB 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.8951395Z #8 sha256:511976c6ab3d18f06369d88a401beb8fa48862cb60d8a025a4dd51cc092a5565 1.20kB / 1.20kB 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.8952655Z #8 sha256:0513567031b18f3d5d8fc07e4ce48950f2a51d493a05045755763fb41f76076f 964B / 964B 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.8954049Z #8 sha256:ff3fbed5e913226bf2387e1f4d75e910ef4959d6149f1e8fed749e924227e07e 17.35MB / 17.35MB 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:17.8955249Z #8 sha256:3cbf0502908f3bd4ec5e5dc3aeb3da0bc1c6690ac394a16fecebb8af91ae1c1f 404B / 404B 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.8956456Z #8 sha256:a13b501623601157699cbc90849b0c6c89c00d01ccaf41f038157454b44c2c9a 628B / 628B 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.8957881Z #8 sha256:a13df183ba7f55b6feb80b286c9028f1c64432c5aeffa748f6c530e0abf4770e 2.79kB / 2.79kB 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:17.8959211Z #8 sha256:618365c073173c14719b1175033543c9185a5b93aa837004b92993c9d28cce43 4.36MB / 4.36MB 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:17.8960567Z #8 extracting sha256:618365c073173c14719b1175033543c9185a5b93aa837004b92993c9d28cce43 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:17.8961865Z #8 extracting sha256:a13df183ba7f55b6feb80b286c9028f1c64432c5aeffa748f6c530e0abf4770e done
+verify	Build the Docker image	2026-11-09T18:23:17.8962736Z #8 extracting sha256:a13b501623601157699cbc90849b0c6c89c00d01ccaf41f038157454b44c2c9a done
+verify	Build the Docker image	2026-11-09T18:23:17.8963726Z #8 extracting sha256:0513567031b18f3d5d8fc07e4ce48950f2a51d493a05045755763fb41f76076f done
+verify	Build the Docker image	2026-11-09T18:23:17.8964505Z #8 extracting sha256:3cbf0502908f3bd4ec5e5dc3aeb3da0bc1c6690ac394a16fecebb8af91ae1c1f done
+verify	Build the Docker image	2026-11-09T18:23:17.8965467Z #8 extracting sha256:511976c6ab3d18f06369d88a401beb8fa48862cb60d8a025a4dd51cc092a5565 done
+verify	Build the Docker image	2026-11-09T18:23:17.8966253Z #8 extracting sha256:911bd3a49d26bae1ce395def8d5e3c2b306275ffbbfd47355bac30d2e095935e done
+verify	Build the Docker image	2026-11-09T18:23:17.8967178Z #8 extracting sha256:ff3fbed5e913226bf2387e1f4d75e910ef4959d6149f1e8fed749e924227e07e 0.3s done
+verify	Build the Docker image	2026-11-09T18:23:17.8967872Z #8 DONE 0.7s
+verify	Build the Docker image	2026-11-09T18:23:18.0469184Z 
+verify	Build the Docker image	2026-11-09T18:23:18.0470232Z #10 [stage-1 2/3] COPY devops/nginx.conf /etc/nginx/conf.d/default.conf
+verify	Build the Docker image	2026-11-09T18:23:18.0501665Z #10 DONE 0.2s
+verify	Build the Docker image	2026-11-09T18:23:18.0503881Z 
+verify	Build the Docker image	2026-11-09T18:23:18.0505250Z #9 [build 1/8] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+verify	Build the Docker image	2026-11-09T18:23:18.4616834Z #9 extracting sha256:2a9491572f6e8f9c3be47a2d17b7dcd30f264003f2cbeedf9359544b3ca5396c 0.9s done
+verify	Build the Docker image	2026-11-09T18:23:18.4618048Z #9 DONE 1.3s
+verify	Build the Docker image	2026-11-09T18:23:18.5649907Z 
+verify	Build the Docker image	2026-11-09T18:23:18.5651649Z #9 [build 1/8] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+verify	Build the Docker image	2026-11-09T18:23:18.5653320Z #9 extracting sha256:df11f9b3da94f640e357ccc86df09a574dc04df1ad95e012f511f4a02b566cd3 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:18.5654445Z #9 extracting sha256:071409a402546fea9e56af710d951a9e0c9bb205e4b1186811677d2c9dcad115 done
+verify	Build the Docker image	2026-11-09T18:23:18.5655230Z #9 DONE 1.3s
+verify	Build the Docker image	2026-11-09T18:23:18.5655422Z 
+verify	Build the Docker image	2026-11-09T18:23:18.5655629Z #11 [build 2/8] WORKDIR /app
+verify	Build the Docker image	2026-11-09T18:23:18.5656012Z #11 DONE 0.1s
+verify	Build the Docker image	2026-11-09T18:23:18.5656188Z 
+verify	Build the Docker image	2026-11-09T18:23:18.5656438Z #12 [build 3/8] COPY package.json ./
+verify	Build the Docker image	2026-11-09T18:23:18.5656882Z #12 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:18.5657106Z 
+verify	Build the Docker image	2026-11-09T18:23:18.5657549Z #13 [build 4/8] COPY scripts/ ./scripts/
+verify	Build the Docker image	2026-11-09T18:23:18.5658057Z #13 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:18.7509253Z 
+verify	Build the Docker image	2026-11-09T18:23:18.7509894Z #14 [build 5/8] COPY src/ ./src/
+verify	Build the Docker image	2026-11-09T18:23:18.7510369Z #14 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:18.7510583Z 
+verify	Build the Docker image	2026-11-09T18:23:18.7510833Z #15 [build 6/8] COPY static/ ./static/
+verify	Build the Docker image	2026-11-09T18:23:18.7511301Z #15 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:18.7511474Z 
+verify	Build the Docker image	2026-11-09T18:23:18.7511702Z #16 [build 7/8] COPY data/ ./data/
+verify	Build the Docker image	2026-11-09T18:23:18.7512146Z #16 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:18.7512325Z 
+verify	Build the Docker image	2026-11-09T18:23:18.7512680Z #17 [build 8/8] RUN npm run build:pages && npm run check:site
+verify	Build the Docker image	2026-11-09T18:23:19.0830869Z #17 0.482 
+verify	Build the Docker image	2026-11-09T18:23:19.0831388Z #17 0.482 > build:pages
+verify	Build the Docker image	2026-11-09T18:23:19.0831939Z #17 0.482 > node scripts/build-h5x.mjs --pages
+verify	Build the Docker image	2026-11-09T18:23:19.0832428Z #17 0.482 
+verify	Build the Docker image	2026-11-09T18:23:19.3118530Z #17 0.561 Built five H5X pages in /app/out using the researched local snapshot.
+verify	Build the Docker image	2026-11-09T18:23:19.3154150Z #17 0.715 
+verify	Build the Docker image	2026-11-09T18:23:19.3154771Z #17 0.715 > check:site
+verify	Build the Docker image	2026-11-09T18:23:19.3156776Z #17 0.715 > node scripts/check-site.mjs
+verify	Build the Docker image	2026-11-09T18:23:19.3157881Z #17 0.715 
+verify	Build the Docker image	2026-11-09T18:23:19.4345094Z #17 0.779 Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.
+verify	Build the Docker image	2026-11-09T18:23:19.4350641Z #17 DONE 0.8s
+verify	Build the Docker image	2026-11-09T18:23:19.4359139Z 
+verify	Build the Docker image	2026-11-09T18:23:19.4361782Z #18 [stage-1 3/3] COPY --from=build /app/out/ /usr/share/nginx/html/
+verify	Build the Docker image	2026-11-09T18:23:19.4362331Z #18 DONE 0.0s
+verify	Build the Docker image	2026-11-09T18:23:19.5380415Z 
+verify	Build the Docker image	2026-11-09T18:23:19.5381350Z #19 exporting to image
+verify	Build the Docker image	2026-11-09T18:23:19.5381906Z #19 exporting layers 0.1s done
+verify	Build the Docker image	2026-11-09T18:23:19.5382524Z #19 exporting manifest sha256:c4b8c77ed6643516cbe82722991f4d5307e00f4519d04114423bfc5b7c2d8305 done
+verify	Build the Docker image	2026-11-09T18:23:19.5383308Z #19 exporting config sha256:bad5f00c9d87babc1094be0a4d67d2a615b58e2c1ac897485074a51c9e33cbed done
+verify	Build the Docker image	2026-11-09T18:23:19.5384414Z #19 exporting attestation manifest sha256:d148340911076f7009bdf886f2231dd225cbe83381309430b669a046b1cff8d8 done
+verify	Build the Docker image	2026-11-09T18:23:19.5385207Z #19 exporting manifest list sha256:c70eb8c2362cbb58ad4c5d342bade41539ef532f4b4345d6f74d11911a07787f
+verify	Build the Docker image	2026-11-09T18:23:19.6342590Z #19 exporting manifest list sha256:c70eb8c2362cbb58ad4c5d342bade41539ef532f4b4345d6f74d11911a07787f done
+verify	Build the Docker image	2026-11-09T18:23:19.6343686Z #19 naming to docker.io/library/h5x-devops:ci done
+verify	Build the Docker image	2026-11-09T18:23:19.6345003Z #19 unpacking to docker.io/library/h5x-devops:ci 0.0s done
+verify	Build the Docker image	2026-11-09T18:23:19.6345741Z #19 DONE 0.1s
+verify	Start isolated acceptance environment	﻿2026-11-09T18:23:19.6570374Z ##[group]Run docker network create h5x-ci
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6570765Z ^[[36;1mdocker network create h5x-ci^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6571211Z ^[[36;1mdocker run -d --name h5x-web --network h5x-ci -p 127.0.0.1:18081:8080 h5x-devops:ci^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6572027Z ^[[36;1mdocker run -d --name h5x-selenium --network h5x-ci --shm-size=1g -p 127.0.0.1:4444:4444 selenium/standalone-chromium:latest^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6572589Z ^[[36;1mfor attempt in $(seq 1 60); do^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6573029Z ^[[36;1m  if curl -fsS http://127.0.0.1:4444/status | grep -q '"ready": true'; then exit 0; fi^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6573442Z ^[[36;1m  sleep 2^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6573671Z ^[[36;1mdone^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6573886Z ^[[36;1mdocker logs h5x-selenium^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6574134Z ^[[36;1mexit 1^[[0m
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6606646Z shell: /usr/bin/bash -e {0}
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6606926Z env:
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6607197Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6607804Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6608284Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6608667Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6609052Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6609454Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.6609778Z ##[endgroup]
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.7027483Z 1f74fc573efa09d5299cb8e73c26c5e7a978e3edabe224e968c0c58ff0b2a073
+verify	Start isolated acceptance environment	2026-11-09T18:23:19.7500880Z aa7a80d026575d929ddf2c4564868be2f678fee1ea0e3c7c0e4c6d30bdda3ffe
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.0313805Z Unable to find image 'selenium/standalone-chromium:latest' locally
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.3569868Z latest: Pulling from selenium/standalone-chromium
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4938773Z 55c4c20530db: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4948390Z 435bf5c20694: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4949031Z 424cdb9921c7: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4949667Z fdaf9099c5a9: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4950214Z d9d511d19a19: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4950952Z 8fe65a9f1fbd: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4951572Z 0db1596eb251: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4952155Z ac5d997b8378: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4952783Z 2dd4f1438959: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4953371Z f98d2b235b6a: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4953946Z dd078a50a451: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4954616Z 67201fc25d09: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4955189Z 2c226f3e4574: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4955744Z b99b2cd72c0f: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4956310Z 7452f941966d: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4956887Z 6a0f54b29edf: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4958394Z d8fed7557717: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4959450Z e8d1fabc9ace: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4959958Z 5c1da4f4e0f5: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4960468Z 7532175e9f75: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4960978Z 7fb059a0bec9: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4961491Z 6e790ebaa541: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4961973Z 9c0f2002eadc: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4962449Z 1feb8a239761: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4962902Z 126fbce7da01: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4963383Z 34302d034c0b: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4963837Z 456473f798f5: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4964322Z ca7e0cb7b0ca: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4964811Z 8db595fff1c9: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4965290Z f42964b747aa: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4965773Z d284cfb4ac15: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4966244Z 4b0bdaca8696: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4966697Z 9aeb770181e1: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4967168Z 5bb50569e11b: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4968160Z 0c5556d1ae27: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.4968630Z 49272d5e4c3b: Pulling fs layer
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6526283Z 67201fc25d09: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6544518Z 9aeb770181e1: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6551852Z 2dd4f1438959: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6562798Z 7fb059a0bec9: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6576995Z 6e790ebaa541: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6625222Z 8db595fff1c9: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6642515Z 424cdb9921c7: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6718534Z d9d511d19a19: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6776660Z 0db1596eb251: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6789397Z 34302d034c0b: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6804575Z ca7e0cb7b0ca: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6838498Z 55c4c20530db: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6839844Z 7452f941966d: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6844929Z e8d1fabc9ace: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6846797Z 7532175e9f75: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6854040Z 8fe65a9f1fbd: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6865126Z dd078a50a451: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6883360Z 5c1da4f4e0f5: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6895970Z 5bb50569e11b: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6936301Z 0c5556d1ae27: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.6993541Z ac5d997b8378: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.7062321Z 9c0f2002eadc: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.7078023Z 1feb8a239761: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.7998459Z 49272d5e4c3b: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.8018900Z 89b3546167ed: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:20.8036117Z 2c226f3e4574: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.0046476Z dfdac13335c7: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.0109614Z 126fbce7da01: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.0128544Z f98d2b235b6a: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.0157220Z 456473f798f5: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.3301217Z f42964b747aa: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.4631403Z 435bf5c20694: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.4640960Z d8fed7557717: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:21.9227069Z 4b0bdaca8696: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:22.2565146Z 6a0f54b29edf: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:22.7368870Z d284cfb4ac15: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:23.8350954Z b99b2cd72c0f: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:23.8353305Z fdaf9099c5a9: Download complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:23.8477012Z d9d511d19a19: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:23.8784725Z 435bf5c20694: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:25.6632338Z ac5d997b8378: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:25.6816153Z d284cfb4ac15: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:25.9697853Z 2c226f3e4574: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:25.9718454Z f98d2b235b6a: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5428738Z 7fb059a0bec9: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5434561Z 6e790ebaa541: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5512567Z ca7e0cb7b0ca: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5633957Z 5c1da4f4e0f5: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5685954Z 1feb8a239761: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5729530Z 49272d5e4c3b: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.5802122Z 6a0f54b29edf: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:26.8585371Z 126fbce7da01: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:27.0629163Z 456473f798f5: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:27.5637688Z f42964b747aa: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:28.6471095Z 0db1596eb251: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:28.6594035Z dd078a50a451: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:28.6621098Z 0c5556d1ae27: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:28.6694406Z 4b0bdaca8696: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:31.3573309Z b99b2cd72c0f: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:32.2389684Z 8db595fff1c9: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:32.2422281Z 424cdb9921c7: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:32.2439755Z 34302d034c0b: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:32.2507098Z 7532175e9f75: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:32.2550571Z 9c0f2002eadc: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:32.2562283Z d8fed7557717: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.8498233Z fdaf9099c5a9: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9086783Z 67201fc25d09: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9102828Z 9aeb770181e1: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9146283Z 2dd4f1438959: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9164675Z 55c4c20530db: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9179749Z 7452f941966d: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9194829Z e8d1fabc9ace: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9216701Z 8fe65a9f1fbd: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9227853Z 5bb50569e11b: Pull complete
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9228974Z Digest: sha256:b211549a4c35f11826bc1a7559b9f23ff055198517f8cb7d49ef74df01c5e38d
+verify	Start isolated acceptance environment	2026-11-09T18:23:34.9230687Z Status: Downloaded newer image for selenium/standalone-chromium:latest
+verify	Start isolated acceptance environment	2026-11-09T18:23:38.1205765Z dbf7cf36505aed99ffcaa2133454aaf80c7b33137891aead365e65b71233903f
+verify	Start isolated acceptance environment	2026-11-09T18:23:38.2559627Z curl: (56) Recv failure: Connection reset by peer
+verify	Start isolated acceptance environment	2026-11-09T18:23:40.2668913Z curl: (56) Recv failure: Connection reset by peer
+verify	Selenium browser acceptance tests	﻿2026-11-09T18:23:42.4219468Z ##[group]Run python -m pip install -r devops/requirements.txt
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4220297Z ^[[36;1mpython -m pip install -r devops/requirements.txt^[[0m
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4221169Z ^[[36;1mpython -m pytest tests/selenium -v -s --junitxml=reports/selenium/junit.xml^[[0m
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4270226Z shell: /usr/bin/bash -e {0}
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4270716Z env:
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4271180Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4271970Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4272728Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4273434Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4274114Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4274800Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4275427Z   BASE_URL: http://h5x-web:8080
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4275900Z   SELENIUM_REMOTE_URL: http://127.0.0.1:4444
+verify	Selenium browser acceptance tests	2026-11-09T18:23:42.4276459Z ##[endgroup]
+verify	Selenium browser acceptance tests	2026-11-09T18:23:44.9199586Z Collecting pytest==8.4.2 (from -r devops/requirements.txt (line 1))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.0036701Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.0516901Z Collecting selenium==4.38.0 (from -r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.0757807Z   Downloading selenium-4.38.0-py3-none-any.whl.metadata (7.5 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.1085027Z Collecting iniconfig>=1 (from pytest==8.4.2->-r devops/requirements.txt (line 1))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.1321154Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.1673492Z Collecting packaging>=20 (from pytest==8.4.2->-r devops/requirements.txt (line 1))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.1909068Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.2224973Z Collecting pluggy<2,>=1.5 (from pytest==8.4.2->-r devops/requirements.txt (line 1))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.2463946Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.2849033Z Collecting pygments>=2.7.2 (from pytest==8.4.2->-r devops/requirements.txt (line 1))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.3084777Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.3488387Z Collecting urllib3<3.0,>=2.5.0 (from urllib3[socks]<3.0,>=2.5.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.3724694Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.4102726Z Collecting trio<1.0,>=0.31.0 (from selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.4335939Z   Downloading trio-0.35.0-py3-none-any.whl.metadata (8.5 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.4666413Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.4902059Z   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.5265987Z Collecting certifi>=2025.10.5 (from selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.5501841Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.5975457Z Collecting typing_extensions<5.0,>=4.15.0 (from selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.6209566Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.6555776Z Collecting websocket-client<2.0,>=1.8.0 (from selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.6790975Z   Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.7132868Z Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.7366635Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.7706839Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.7941782Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.8290855Z Collecting idna (from trio<1.0,>=0.31.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.8525610Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.8831220Z Collecting outcome (from trio<1.0,>=0.31.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.9065640Z   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.9357620Z Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.9591566Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:45.9924442Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.0162033Z   Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.0479164Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.5.0->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.0713371Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.1093222Z Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium==4.38.0->-r devops/requirements.txt (line 2))
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.1325394Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.1618702Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.2555097Z Downloading selenium-4.38.0-py3-none-any.whl (9.7 MB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.3602125Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 97.0 MB/s  0:00:00
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.3835890Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.4085753Z Downloading trio-0.35.0-py3-none-any.whl (513 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.4347159Z Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.4600714Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.4853954Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.5109063Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.5362965Z Downloading websocket_client-1.9.2-py3-none-any.whl (95 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.5618333Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.5875807Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.6150896Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.6430175Z Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.6694425Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.6955529Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.7017123Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 253.1 MB/s  0:00:00
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.7252571Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.7501798Z Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.7750522Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.8002424Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:46.8258709Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+verify	Selenium browser acceptance tests	2026-11-09T18:23:47.0038570Z Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, pygments, pluggy, packaging, iniconfig, idna, h11, certifi, attrs, wsproto, pytest, outcome, trio, trio-websocket, selenium
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.3691642Z 
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.3721162Z Successfully installed attrs-26.1.0 certifi-2026.10.23 h11-0.16.0 idna-3.20 iniconfig-2.3.1 outcome-1.3.0.post0 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pysocks-1.7.1 pytest-8.4.2 selenium-4.38.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.35.0 trio-websocket-0.12.2 typing_extensions-4.16.0 urllib3-2.8.0 websocket-client-1.9.2 wsproto-1.3.2
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.3731045Z 
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.3731642Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.3732408Z [notice] To update, run: pip install --upgrade pip
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.8203638Z ============================= test session starts ==============================
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.8204720Z platform linux -- Python 3.12.16, pytest-8.4.2, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.8205351Z cachedir: .pytest_cache
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.8205711Z rootdir: /home/runner/work/H5X/H5X
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.9814469Z collecting ... collected 8 items
+verify	Selenium browser acceptance tests	2026-11-09T18:23:49.9814783Z 
+verify	Selenium browser acceptance tests	2026-11-09T18:23:51.7379849Z tests/selenium/test_website.py::test_navigation[index.html-ctf-CTF TEAM] PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:23:53.0795117Z tests/selenium/test_website.py::test_navigation[bug-hunt.html-bugs-BUG HUNT] PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:23:54.4487990Z tests/selenium/test_website.py::test_navigation[hackathon.html-hackathon-HACKATHON] PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:23:55.7932033Z tests/selenium/test_website.py::test_navigation[events.html-events-EVENTS ATTENDED] PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:23:57.2047076Z tests/selenium/test_website.py::test_navigation[gallery.html-gallery-GALLERY] PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:23:58.8519726Z tests/selenium/test_website.py::test_theme_persists_after_reload PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:24:00.5388147Z tests/selenium/test_website.py::test_gallery_selection_and_dialog PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:24:01.9600030Z tests/selenium/test_website.py::test_motion_pause_persists PASSED
+verify	Selenium browser acceptance tests	2026-11-09T18:24:01.9600753Z 
+verify	Selenium browser acceptance tests	2026-11-09T18:24:01.9601313Z --- generated xml file: /home/runner/work/H5X/H5X/reports/selenium/junit.xml ---
+verify	Selenium browser acceptance tests	2026-11-09T18:24:01.9602209Z ============================== 8 passed in 12.10s ==============================
+verify	Create a local Kubernetes cluster	﻿2026-11-09T18:24:02.0034377Z ##[group]Run curl -fsSL https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64 -o kind
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0035009Z ^[[36;1mcurl -fsSL https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64 -o kind^[[0m
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0035403Z ^[[36;1mchmod +x kind^[[0m
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0036132Z ^[[36;1m./kind create cluster --name h5x-devops --config devops/kind.yaml --image kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5 --wait 120s^[[0m
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0036971Z ^[[36;1m./kind load docker-image h5x-devops:ci --name h5x-devops^[[0m
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0066717Z shell: /usr/bin/bash -e {0}
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0066994Z env:
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0067289Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0067897Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0068322Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0068709Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0069144Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0069540Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:02.0069859Z ##[endgroup]
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:03.3056587Z Creating cluster "h5x-devops" ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:03.3057746Z  • Ensuring node image (kindest/node:v1.37.0) 🖼️  ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:08.3140725Z  ✓ Ensuring node image (kindest/node:v1.37.0) 🖼️
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:08.3141234Z  • Preparing nodes 📦   ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:12.4972667Z  ✓ Preparing nodes 📦 
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:12.5317474Z  • Writing configuration 📜  ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:12.7250568Z  ✓ Writing configuration 📜
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:12.7251198Z  • Starting control-plane 🕹️  ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:20.7211494Z  ✓ Starting control-plane 🕹️
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:20.7212182Z  • Installing CNI 🔌  ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:21.0483598Z  ✓ Installing CNI 🔌
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:21.0484201Z  • Installing StorageClass 💾  ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:21.3974813Z  ✓ Installing StorageClass 💾
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:21.4288082Z  • Waiting ≤ 2m0s for control-plane = Ready ⏳  ...
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.3514871Z  ✓ Waiting ≤ 2m0s for control-plane = Ready ⏳
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.3515570Z  • Ready after 17s 💚
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.5061394Z Set kubectl context to "kind-h5x-devops"
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.5061851Z You can now use your cluster with:
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.5062052Z 
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.5062252Z kubectl cluster-info --context kind-h5x-devops
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.5062470Z 
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.7262552Z Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/#community 🙂
+verify	Create a local Kubernetes cluster	2026-11-09T18:24:38.7264292Z Image: "h5x-devops:ci" with ID "sha256:c70eb8c2362cbb58ad4c5d342bade41539ef532f4b4345d6f74d11911a07787f" not yet present on node "h5x-devops-control-plane", loading...
+verify	Deploy and verify Kubernetes	﻿2026-11-09T18:24:40.5498983Z ##[group]Run mkdir -p reports/kubernetes
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5499347Z ^[[36;1mmkdir -p reports/kubernetes^[[0m
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5499829Z ^[[36;1mkubectl kustomize k8s | sed 's|h5x-devops:local|h5x-devops:ci|g' > reports/kubernetes/rendered.yaml^[[0m
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5500465Z ^[[36;1mkubectl --context kind-h5x-devops apply -f reports/kubernetes/rendered.yaml^[[0m
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5501081Z ^[[36;1mkubectl --context kind-h5x-devops -n h5x-devops rollout status deployment/h5x --timeout=120s^[[0m
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5502089Z ^[[36;1mkubectl --context kind-h5x-devops -n h5x-devops get deployments,pods,services -o wide | tee reports/kubernetes/resources.txt^[[0m
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5502913Z ^[[36;1mcurl --fail --retry 12 --retry-delay 2 --retry-all-errors http://127.0.0.1:18088/healthz^[[0m
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5533516Z shell: /usr/bin/bash -e {0}
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5533798Z env:
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5534077Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5534525Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5535032Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5535432Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5535812Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5536193Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:40.5536523Z ##[endgroup]
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:43.2672727Z namespace/h5x-devops created
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:43.2768749Z service/h5x created
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:43.2897523Z deployment.apps/h5x created
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:43.4299311Z Waiting for deployment "h5x" rollout to finish: 0 of 2 updated replicas are available...
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.8430907Z Waiting for deployment "h5x" rollout to finish: 1 of 2 updated replicas are available...
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.8556654Z deployment "h5x" successfully rolled out
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9568036Z NAME                  READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES          SELECTOR
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9568841Z deployment.apps/h5x   2/2     2            2           4s    website      h5x-devops:ci   app=h5x
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9574226Z 
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9574924Z NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                       NOMINATED NODE   READINESS GATES
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9576068Z pod/h5x-77b5d854fd-lhbn8   1/1     Running   0          4s    10.244.0.5   h5x-devops-control-plane   <none>           <none>
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9577466Z pod/h5x-77b5d854fd-tgvxw   1/1     Running   0          4s    10.244.0.6   h5x-devops-control-plane   <none>           <none>
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9588085Z 
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9588679Z NAME          TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9589319Z service/h5x   NodePort   10.96.226.250   <none>        80:30080/TCP   4s    app=h5x
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9665458Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9666262Z                                  Dload  Upload  Total   Spent   Left   Speed
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9666627Z 
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9672697Z   0      0   0      0   0      0      0      0                              0
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9673423Z 100      8 100      8   0      0  10088      0                              0
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9674028Z 100      8 100      8   0      0   9685      0                              0
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9674740Z 100      8 100      8   0      0   9334      0                              0
+verify	Deploy and verify Kubernetes	2026-11-09T18:24:47.9675126Z healthy
+verify	Upload browser and deployment evidence	﻿2026-11-09T18:24:47.9751487Z ##[group]Run actions/upload-artifact@v4
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9751822Z with:
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9752047Z   name: h5x-devops-evidence
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9752290Z   path: reports/
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9752502Z   retention-days: 14
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9752724Z   if-no-files-found: warn
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9752961Z   compression-level: 6
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9753178Z   overwrite: false
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9753392Z   include-hidden-files: false
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9753621Z env:
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9753874Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9754317Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9754741Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9755113Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9755482Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9755913Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Upload browser and deployment evidence	2026-11-09T18:24:47.9756453Z ##[endgroup]
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.1458399Z (node:14378) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.1459207Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.1556008Z With the provided path, there will be 12 files uploaded
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.1562574Z Artifact name is valid!
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.1563228Z Root directory input is valid!
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.4196833Z Beginning upload of artifact content to blob storage
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.5255106Z (node:14378) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.7049936Z Uploaded bytes 1805859
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.7276121Z Finished uploading artifact content to blob storage!
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.7277583Z SHA256 digest of uploaded artifact zip is 4754aee955557d940bd89aade384a7c1aa69104a894981d727667eac66d950c3
+verify	Upload browser and deployment evidence	2026-11-09T18:24:48.7278850Z Finalizing artifact upload
+verify	Upload browser and deployment evidence	2026-11-09T18:24:49.0799086Z Artifact h5x-devops-evidence.zip successfully finalized. Artifact ID 13699098502
+verify	Upload browser and deployment evidence	2026-11-09T18:24:49.0800952Z Artifact h5x-devops-evidence has been successfully uploaded! Final size is 1805859 bytes. Artifact ID is 13699098502
+verify	Upload browser and deployment evidence	2026-11-09T18:24:49.0805797Z Artifact download URL: https://github.com/FaisalTabrez/H5X/actions/runs/42673103294/artifacts/13699098502
+verify	Clean up the temporary lab	﻿2026-11-09T18:24:49.0941958Z ##[group]Run docker rm -f h5x-web h5x-selenium || true
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0942379Z ^[[36;1mdocker rm -f h5x-web h5x-selenium || true^[[0m
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0942780Z ^[[36;1mif [ -x ./kind ]; then ./kind delete cluster --name h5x-devops; fi^[[0m
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0972088Z shell: /usr/bin/bash -e {0}
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0972357Z env:
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0972643Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0973077Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0973505Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0973888Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0974271Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0974660Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify	Clean up the temporary lab	2026-11-09T18:24:49.0974980Z ##[endgroup]
+verify	Clean up the temporary lab	2026-11-09T18:24:49.9310202Z h5x-web
+verify	Clean up the temporary lab	2026-11-09T18:24:49.9336981Z h5x-selenium
+verify	Clean up the temporary lab	2026-11-09T18:24:49.9508257Z Deleting cluster "h5x-devops" ...
+verify	Clean up the temporary lab	2026-11-09T18:24:50.6513958Z Deleted nodes: ["h5x-devops-control-plane"]
+verify	Post Run actions/setup-python@v6	﻿2026-11-09T18:24:50.6612837Z Post job cleanup.
+verify	Post Run actions/setup-node@v6	﻿2026-11-09T18:24:50.8006793Z Post job cleanup.
+verify	Post Run actions/checkout@v6	﻿2026-11-09T18:24:50.9436663Z Post job cleanup.
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0378175Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0419882Z git version 2.56.0
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0462807Z Temporarily overriding HOME='/home/runner/work/_temp/37815d6c-1789-43df-a77b-beaf36fe82b6' before making global git config changes
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0464505Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0469615Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/H5X/H5X
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0504679Z Removing SSH command configuration
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0513393Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0560209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0843167Z Removing HTTP extra header
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0844794Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.0850286Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1243696Z Removing includeIf entries pointing to credentials config files
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1255045Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1298233Z includeif.gitdir:/home/runner/work/H5X/H5X/.git.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1312681Z includeif.gitdir:/home/runner/work/H5X/H5X/.git/worktrees/*.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1313730Z includeif.gitdir:/github/workspace/.git.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1314605Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1320161Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/H5X/H5X/.git.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1355714Z /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1370196Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/H5X/H5X/.git.path /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1416348Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/H5X/H5X/.git/worktrees/*.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1437798Z /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1447819Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/H5X/H5X/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1479832Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1500200Z /github/runner_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1509638Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1540717Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1560281Z /github/runner_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1569729Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1602456Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Post Run actions/checkout@v6	2026-11-09T18:24:51.1821107Z Removing credentials config '/home/runner/work/_temp/git-credentials-6e1781e6-88f8-4e77-a382-d28d166decbb.config'
+verify	Complete job	﻿2026-11-09T18:24:51.1953021Z Cleaning up orphan processes
+verify	Complete job	2026-11-09T18:24:51.2362659Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

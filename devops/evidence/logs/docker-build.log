@@ -1,0 +1,92 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 613B 0.0s done
+#1 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/nginxinc/nginx-unprivileged:stable-alpine
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 152B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [build 1/8] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+#6 resolve docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+#6 DONE 0.1s
+
+#7 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+#7 resolve docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+#7 resolve docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03 0.0s done
+#7 ...
+
+#6 [build 1/8] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+#6 DONE 0.3s
+
+#5 [internal] load build context
+#5 transferring context: 1.46MB 0.3s done
+#5 DONE 0.5s
+
+#8 [build 2/8] WORKDIR /app
+#8 DONE 0.3s
+
+#7 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+#7 ...
+
+#9 [build 3/8] COPY package.json ./
+#9 DONE 0.1s
+
+#7 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+#7 DONE 0.8s
+
+#10 [build 4/8] COPY scripts/ ./scripts/
+#10 DONE 0.1s
+
+#11 [build 5/8] COPY src/ ./src/
+#11 DONE 0.1s
+
+#12 [stage-1 2/3] COPY devops/nginx.conf /etc/nginx/conf.d/default.conf
+#12 DONE 0.1s
+
+#13 [build 6/8] COPY static/ ./static/
+#13 DONE 0.1s
+
+#14 [build 7/8] COPY data/ ./data/
+#14 DONE 0.1s
+
+#15 [build 8/8] RUN npm run build:pages && npm run check:site
+#15 3.283 
+#15 3.283 > build:pages
+#15 3.283 > node scripts/build-h5x.mjs --pages
+#15 3.283 
+#15 3.772 Built five H5X pages in /app/out using the researched local snapshot.
+#15 4.175 
+#15 4.175 > check:site
+#15 4.175 > node scripts/check-site.mjs
+#15 4.175 
+#15 4.318 Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.
+#15 DONE 5.5s
+
+#16 [stage-1 3/3] COPY --from=build /app/out/ /usr/share/nginx/html/
+#16 DONE 0.1s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.2s done
+#17 exporting manifest sha256:244ef503a15e431c0892dfc6a672508dd1c9bba7cb15053cbfe528447c52b295 0.0s done
+#17 exporting config sha256:4d16ad564355e4d6964bba32b1919af95ffb7405e36d60ccfb14a9622e5f530f 0.0s done
+#17 exporting attestation manifest sha256:8acae301332fcd806a2b22f6c483c966056cbccf42fbde8d732c41913ce78881 0.0s done
+#17 exporting manifest list sha256:7e6f72cc51977650719062e5e701c51a039edc08d4a1fc7dc106938a07811ccb 0.0s done
+#17 naming to docker.io/library/h5x-devops:local
+#17 naming to docker.io/library/h5x-devops:local done
+#17 unpacking to docker.io/library/h5x-devops:local 0.1s done
+#17 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/isq4b5e134z5n4ao7dellynpi

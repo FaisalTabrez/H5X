@@ -1,0 +1,16 @@
+GitHub Actions command output recorded on the Windows host
+Command: gh run view 42673103294 --repo FaisalTabrez/H5X --log
+
+Selected test and deployment lines; full log accompanies the report.
+
+2026-11-09T18:23:14.2035120Z # tests 14
+2026-11-09T18:23:14.2036347Z # pass 14
+2026-11-09T18:23:14.2036970Z # fail 0
+2026-11-09T18:23:49.9814469Z collecting ... collected 8 items
+2026-11-09T18:24:01.9602209Z ============================== 8 passed in 12.10s ==============================
+2026-11-09T18:24:43.2672727Z namespace/h5x-devops created
+2026-11-09T18:24:43.2768749Z service/h5x created
+2026-11-09T18:24:43.2897523Z deployment.apps/h5x created
+2026-11-09T18:24:47.8556654Z deployment "h5x" successfully rolled out
+2026-11-09T18:24:47.9568841Z deployment.apps/h5x   2/2     2            2           4s    website      h5x-devops:ci   app=h5x
+2026-11-09T18:24:47.9675126Z healthy

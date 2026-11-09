@@ -1,0 +1,22 @@
+$ docker build --progress=plain -t h5x-devops:local .
+$ tail -7
+#17 exporting config sha256:6baf5cff736347c4597a2cd0874920bbf135c5628eef8c1767d387b6ca2cb811 done
+#17 exporting attestation manifest sha256:d857f1a1153018450a2e2f8ff4df6ce10d4637a820677e0db758e5cc843ae53c
+#17 exporting attestation manifest sha256:d857f1a1153018450a2e2f8ff4df6ce10d4637a820677e0db758e5cc843ae53c 0.0s done
+#17 exporting manifest list sha256:57150910d5598869d9fc9362fe1ca477f7dcf0a11dea8c4ce3f23aed5a25dffa 0.0s done
+#17 naming to docker.io/library/h5x-devops:local done
+#17 unpacking to docker.io/library/h5x-devops:local 0.0s done
+#17 DONE 0.1s
+$ docker image inspect h5x-devops:local --format 'User={{.Config.User}} Size={{.Size}} bytes'
+User=101 Size=93283132 bytes
+$ docker ps --filter name=h5x-demo --format 'table {{.Names}}\t{{.Status}}'
+NAMES      STATUS
+h5x-demo   Up 5 minutes (healthy)
+$ docker inspect h5x-demo --format 'Health={{.State.Health.Status}}'
+Health=healthy
+$ curl -fsS http://h5x-demo:8080/healthz
+healthy
+$ curl -s -o /dev/null -w 'Home HTTP %{http_code}\n' http://h5x-demo:8080/
+Home HTTP 200
+$ curl -s -o /dev/null -w 'Unknown route HTTP %{http_code}\n' http://h5x-demo:8080/missing
+Unknown route HTTP 404

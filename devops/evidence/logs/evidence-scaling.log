@@ -1,0 +1,10 @@
+$ kubectl -n h5x-devops scale deployment/h5x --replicas=3
+deployment.apps/h5x scaled
+$ kubectl -n h5x-devops rollout status deployment/h5x --timeout=90s
+Waiting for deployment "h5x" rollout to finish: 2 of 3 updated replicas are available...
+deployment "h5x" successfully rolled out
+$ kubectl -n h5x-devops get pods
+NAME                   READY   STATUS    RESTARTS   AGE
+h5x-648b67cc75-br7tp   1/1     Running   0          3m24s
+h5x-648b67cc75-f8bl8   1/1     Running   0          3m24s
+h5x-648b67cc75-wfhsp   1/1     Running   0          4s

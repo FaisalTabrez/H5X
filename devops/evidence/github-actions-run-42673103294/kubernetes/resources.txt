@@ -1,0 +1,9 @@
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES          SELECTOR
+deployment.apps/h5x   2/2     2            2           4s    website      h5x-devops:ci   app=h5x
+
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                       NOMINATED NODE   READINESS GATES
+pod/h5x-77b5d854fd-lhbn8   1/1     Running   0          4s    10.244.0.5   h5x-devops-control-plane   <none>           <none>
+pod/h5x-77b5d854fd-tgvxw   1/1     Running   0          4s    10.244.0.6   h5x-devops-control-plane   <none>           <none>
+
+NAME          TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+service/h5x   NodePort   10.96.226.250   <none>        80:30080/TCP   4s    app=h5x

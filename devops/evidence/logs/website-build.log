@@ -1,0 +1,10 @@
+
+> build:pages
+> node scripts/build-h5x.mjs --pages
+
+Built five H5X pages in C:\Users\FAISAL TABREZ\Documents\Codex\2026-11-09\https-github-com-https-github-com-5\work\H5X\out using the researched local snapshot.
+
+> check:site
+> node scripts/check-site.mjs
+
+Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.

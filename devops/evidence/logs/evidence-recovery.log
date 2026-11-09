@@ -1,0 +1,18 @@
+$ kubectl -n h5x-devops delete pod h5x-648b67cc75-br7tp --wait=true
+pod "h5x-648b67cc75-br7tp" deleted from h5x-devops namespace
+$ kubectl -n h5x-devops wait --for=condition=ready pod -l app=h5x --timeout=90s
+pod/h5x-648b67cc75-f8bl8 condition met
+pod/h5x-648b67cc75-qwt76 condition met
+pod/h5x-648b67cc75-wfhsp condition met
+$ kubectl -n h5x-devops get pods
+NAME                   READY   STATUS    RESTARTS   AGE
+h5x-648b67cc75-f8bl8   1/1     Running   0          3m34s
+h5x-648b67cc75-qwt76   1/1     Running   0          4s
+h5x-648b67cc75-wfhsp   1/1     Running   0          14s
+$ kubectl -n h5x-devops scale deployment/h5x --replicas=2
+deployment.apps/h5x scaled
+$ kubectl -n h5x-devops rollout status deployment/h5x --timeout=90s
+deployment "h5x" successfully rolled out
+$ kubectl -n h5x-devops get deployment h5x
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+h5x    2/2     2            2           3m34s

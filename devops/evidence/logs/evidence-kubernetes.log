@@ -1,0 +1,17 @@
+$ kubectl --context kind-h5x-devops get nodes
+NAME                       STATUS   ROLES           AGE    VERSION
+h5x-devops-control-plane   Ready    control-plane   8m3s   v1.37.0
+$ kubectl -n h5x-devops rollout status deployment/h5x
+deployment "h5x" successfully rolled out
+$ kubectl -n h5x-devops get deployments,pods,services
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/h5x   2/2     2            2           2m30s
+
+NAME                       READY   STATUS    RESTARTS   AGE
+pod/h5x-648b67cc75-br7tp   1/1     Running   0          2m30s
+pod/h5x-648b67cc75-f8bl8   1/1     Running   0          2m30s
+
+NAME          TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+service/h5x   NodePort   10.96.217.19   <none>        80:30080/TCP   2m30s
+$ curl -fsS http://h5x-devops-control-plane:30080/healthz
+healthy

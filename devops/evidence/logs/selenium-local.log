@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.4.2, pluggy-1.7.0 -- C:\Users\FAISAL TABREZ\Documents\Codex\2026-11-09\https-github-com-https-github-com-5\work\browser-env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\FAISAL TABREZ\Documents\Codex\2026-11-09\https-github-com-https-github-com-5\work\H5X
+collecting ... collected 8 items
+
+tests/selenium/test_website.py::test_navigation[index.html-ctf-CTF TEAM] PASSED
+tests/selenium/test_website.py::test_navigation[bug-hunt.html-bugs-BUG HUNT] PASSED
+tests/selenium/test_website.py::test_navigation[hackathon.html-hackathon-HACKATHON] PASSED
+tests/selenium/test_website.py::test_navigation[events.html-events-EVENTS ATTENDED] PASSED
+tests/selenium/test_website.py::test_navigation[gallery.html-gallery-GALLERY] PASSED
+tests/selenium/test_website.py::test_theme_persists_after_reload PASSED
+tests/selenium/test_website.py::test_gallery_selection_and_dialog PASSED
+tests/selenium/test_website.py::test_motion_pause_persists PASSED
+
+- generated xml file: C:\Users\FAISAL TABREZ\Documents\Codex\2026-11-09\https-github-com-https-github-com-5\work\H5X\reports\selenium\junit.xml -
+============================= 8 passed in 14.40s ==============================

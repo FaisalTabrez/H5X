@@ -1,0 +1,152 @@
+[
+  {
+    "page": 1,
+    "content_bottom": 630,
+    "images": []
+  },
+  {
+    "page": 2,
+    "content_bottom": 700,
+    "images": []
+  },
+  {
+    "page": 3,
+    "content_bottom": 654.0,
+    "images": []
+  },
+  {
+    "page": 4,
+    "content_bottom": 550.9,
+    "images": []
+  },
+  {
+    "page": 5,
+    "content_bottom": 672.9,
+    "images": [
+      {
+        "file": "01-h5x-kubernetes-website.png",
+        "top": 283.8,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "content_bottom": 650.5,
+    "images": [
+      {
+        "file": "02-git-branch.png",
+        "top": 217.4,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 7,
+    "content_bottom": 702.2,
+    "images": [
+      {
+        "file": "03-github-actions-success.png",
+        "top": 131.1,
+        "height": 238
+      },
+      {
+        "file": "13-github-actions-output.png",
+        "top": 395.6,
+        "height": 238
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "content_bottom": 612.0,
+    "images": [
+      {
+        "file": "04-jenkins-success.png",
+        "top": 278.8,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "content_bottom": 716.2,
+    "images": [
+      {
+        "file": "06-node-tests-build.png",
+        "top": 131.1,
+        "height": 245
+      },
+      {
+        "file": "05-jenkins-console.png",
+        "top": 402.6,
+        "height": 245
+      }
+    ]
+  },
+  {
+    "page": 10,
+    "content_bottom": 599.7,
+    "images": [
+      {
+        "file": "07-docker-build-health.png",
+        "top": 278.2,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 11,
+    "content_bottom": 590.0,
+    "images": [
+      {
+        "file": "08-selenium-tests.png",
+        "top": 256.8,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 12,
+    "content_bottom": 610.0,
+    "images": [
+      {
+        "file": "09-selenium-gallery-dialog.png",
+        "top": 136.8,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 13,
+    "content_bottom": 628.5,
+    "images": [
+      {
+        "file": "10-kubernetes-resources.png",
+        "top": 217.4,
+        "height": 264.6
+      }
+    ]
+  },
+  {
+    "page": 14,
+    "content_bottom": 702.2,
+    "images": [
+      {
+        "file": "11-kubernetes-scaling.png",
+        "top": 131.1,
+        "height": 238
+      },
+      {
+        "file": "12-kubernetes-recovery.png",
+        "top": 395.6,
+        "height": 238
+      }
+    ]
+  },
+  {
+    "page": 15,
+    "content_bottom": 573.3,
+    "images": []
+  }
+]

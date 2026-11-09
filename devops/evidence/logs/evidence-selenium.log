@@ -1,0 +1,18 @@
+$ /opt/browser-tests/bin/python -m pytest tests/selenium -v --junitxml=reports/evidence-tests.xml
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.4.2, pluggy-1.7.0 -- /opt/browser-tests/bin/python
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/H5X-DevOps
+collecting ... collected 8 items
+
+tests/selenium/test_website.py::test_navigation[index.html-ctf-CTF TEAM] PASSED [ 12%]
+tests/selenium/test_website.py::test_navigation[bug-hunt.html-bugs-BUG HUNT] PASSED [ 25%]
+tests/selenium/test_website.py::test_navigation[hackathon.html-hackathon-HACKATHON] PASSED [ 37%]
+tests/selenium/test_website.py::test_navigation[events.html-events-EVENTS ATTENDED] PASSED [ 50%]
+tests/selenium/test_website.py::test_navigation[gallery.html-gallery-GALLERY] PASSED [ 62%]
+tests/selenium/test_website.py::test_theme_persists_after_reload PASSED  [ 75%]
+tests/selenium/test_website.py::test_gallery_selection_and_dialog PASSED [ 87%]
+tests/selenium/test_website.py::test_motion_pause_persists PASSED        [100%]
+
+- generated xml file: /var/jenkins_home/workspace/H5X-DevOps/reports/evidence-tests.xml -
+============================== 8 passed in 8.55s ===============================

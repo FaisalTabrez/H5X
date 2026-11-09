@@ -1,0 +1,84 @@
+
+> test
+> node --test tests/ctftime-feed.test.mjs tests/scroll-gesture.test.mjs
+
+TAP version 13
+# Subtest: only H5X results and real rated seasons are included
+ok 1 - only H5X results and real rated seasons are included
+  ---
+  duration_ms: 7.2397
+  ...
+# Subtest: revised placements, titles, points, ranks and deleted events replace the prior record
+ok 2 - revised placements, titles, points, ranks and deleted events replace the prior record
+  ---
+  duration_ms: 0.6575
+  ...
+# Subtest: the record revision is stable when only the check time changes
+ok 3 - the record revision is stable when only the check time changes
+  ---
+  duration_ms: 0.317
+  ...
+# Subtest: wrong team IDs and malformed result places are rejected
+ok 4 - wrong team IDs and malformed result places are rejected
+  ---
+  duration_ms: 1.4667
+  ...
+# Subtest: a failed annual request rejects the entire refresh instead of mixing new ranks with old events
+ok 5 - a failed annual request rejects the entire refresh instead of mixing new ranks with old events
+  ---
+  duration_ms: 1.0497
+  ...
+# Subtest: small trackpad movements accumulate into one deliberate step
+ok 6 - small trackpad movements accumulate into one deliberate step
+  ---
+  duration_ms: 1.8345
+  ...
+# Subtest: a long momentum tail cannot skip several pages
+ok 7 - a long momentum tail cannot skip several pages
+  ---
+  duration_ms: 0.52
+  ...
+# Subtest: a reversal clears accumulated movement and scroll-up moves backward
+ok 8 - a reversal clears accumulated movement and scroll-up moves backward
+  ---
+  duration_ms: 0.306
+  ...
+# Subtest: an opposite gesture reverses immediately during momentum lock and cooldown
+ok 9 - an opposite gesture reverses immediately during momentum lock and cooldown
+  ---
+  duration_ms: 0.2599
+  ...
+# Subtest: tiny opposite noise does not reverse until it becomes deliberate
+ok 10 - tiny opposite noise does not reverse until it becomes deliberate
+  ---
+  duration_ms: 0.6126
+  ...
+# Subtest: fresh input during the transition cooldown cannot advance again
+ok 11 - fresh input during the transition cooldown cannot advance again
+  ---
+  duration_ms: 0.192
+  ...
+# Subtest: pixel, line and page wheel units normalize consistently
+ok 12 - pixel, line and page wheel units normalize consistently
+  ---
+  duration_ms: 0.2676
+  ...
+# Subtest: finishing an inner text scroll does not advance on its remaining momentum
+ok 13 - finishing an inner text scroll does not advance on its remaining momentum
+  ---
+  duration_ms: 0.2295
+  ...
+# Subtest: content stepping stops at the ends instead of changing routes or wrapping
+ok 14 - content stepping stops at the ends instead of changing routes or wrapping
+  ---
+  duration_ms: 0.3355
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 133.8345

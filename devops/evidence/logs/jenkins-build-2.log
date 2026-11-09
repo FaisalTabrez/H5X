@@ -1,0 +1,330 @@
+Started by user faisal
+Obtained Jenkinsfile from git https://github.com/FaisalTabrez/H5X.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/H5X-DevOps
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] timeout
+[2026-11-09T18:21:24.947Z] Timeout set to expire in 20 min
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Git checkout)
+[Pipeline] checkout
+[2026-11-09T18:21:25.088Z] Selected Git installation does not exist. Using Default
+[2026-11-09T18:21:25.088Z] The recommended git tool is: NONE
+[2026-11-09T18:21:25.088Z] No credentials specified
+[2026-11-09T18:21:25.089Z]  > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/H5X-DevOps/.git # timeout=10
+[2026-11-09T18:21:25.093Z] Fetching changes from the remote Git repository
+[2026-11-09T18:21:25.095Z]  > git config remote.origin.url https://github.com/FaisalTabrez/H5X.git # timeout=10
+[2026-11-09T18:21:25.098Z] Fetching upstream changes from https://github.com/FaisalTabrez/H5X.git
+[2026-11-09T18:21:25.098Z]  > git --version # timeout=10
+[2026-11-09T18:21:25.101Z]  > git --version # 'git version 2.47.3'
+[2026-11-09T18:21:25.101Z]  > git fetch --tags --force --progress -- https://github.com/FaisalTabrez/H5X.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2026-11-09T18:21:26.191Z]  > git rev-parse refs/remotes/origin/devops/h5x-lab-project^{commit} # timeout=10
+[2026-11-09T18:21:26.197Z] Checking out Revision 5c4d3af21c37617d5e3643ba0185b0d466ad8d2b (refs/remotes/origin/devops/h5x-lab-project)
+[2026-11-09T18:21:26.199Z]  > git config core.sparsecheckout # timeout=10
+[2026-11-09T18:21:26.203Z]  > git checkout -f 5c4d3af21c37617d5e3643ba0185b0d466ad8d2b # timeout=10
+[2026-11-09T18:21:26.225Z] Commit message: "Include Docker CLI Buildx and terminal capture in Jenkins lab image"
+[2026-11-09T18:21:26.226Z]  > git rev-list --no-walk 9aab77a79f570d4ca945c462076819f76fb32de2 # timeout=10
+[Pipeline] sh
+[2026-11-09T18:21:26.534Z] + git branch --show-current
+[2026-11-09T18:21:26.534Z] + git log -1 --format=%h %s
+[2026-11-09T18:21:26.534Z] 5c4d3af Include Docker CLI Buildx and terminal capture in Jenkins lab image
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test and build)
+[Pipeline] sh
+[2026-11-09T18:21:26.997Z] + node --version
+[2026-11-09T18:21:26.997Z] v22.16.0
+[2026-11-09T18:21:26.997Z] + npm test
+[2026-11-09T18:21:26.997Z] 
+[2026-11-09T18:21:26.998Z] > test
+[2026-11-09T18:21:26.998Z] > node --test tests/ctftime-feed.test.mjs tests/scroll-gesture.test.mjs
+[2026-11-09T18:21:26.998Z] 
+[2026-11-09T18:21:26.998Z] TAP version 13
+[2026-11-09T18:21:26.998Z] # Subtest: only H5X results and real rated seasons are included
+[2026-11-09T18:21:26.998Z] ok 1 - only H5X results and real rated seasons are included
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 1.229803
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: revised placements, titles, points, ranks and deleted events replace the prior record
+[2026-11-09T18:21:26.998Z] ok 2 - revised placements, titles, points, ranks and deleted events replace the prior record
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.468321
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: the record revision is stable when only the check time changes
+[2026-11-09T18:21:26.998Z] ok 3 - the record revision is stable when only the check time changes
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.238944
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: wrong team IDs and malformed result places are rejected
+[2026-11-09T18:21:26.998Z] ok 4 - wrong team IDs and malformed result places are rejected
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.340527
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: a failed annual request rejects the entire refresh instead of mixing new ranks with old events
+[2026-11-09T18:21:26.998Z] ok 5 - a failed annual request rejects the entire refresh instead of mixing new ranks with old events
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.531175
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: small trackpad movements accumulate into one deliberate step
+[2026-11-09T18:21:26.998Z] ok 6 - small trackpad movements accumulate into one deliberate step
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.660031
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: a long momentum tail cannot skip several pages
+[2026-11-09T18:21:26.998Z] ok 7 - a long momentum tail cannot skip several pages
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.845095
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: a reversal clears accumulated movement and scroll-up moves backward
+[2026-11-09T18:21:26.998Z] ok 8 - a reversal clears accumulated movement and scroll-up moves backward
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.097221
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: an opposite gesture reverses immediately during momentum lock and cooldown
+[2026-11-09T18:21:26.998Z] ok 9 - an opposite gesture reverses immediately during momentum lock and cooldown
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.127612
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: tiny opposite noise does not reverse until it becomes deliberate
+[2026-11-09T18:21:26.998Z] ok 10 - tiny opposite noise does not reverse until it becomes deliberate
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.086189
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: fresh input during the transition cooldown cannot advance again
+[2026-11-09T18:21:26.998Z] ok 11 - fresh input during the transition cooldown cannot advance again
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.071651
+[2026-11-09T18:21:26.998Z]   type: 'test'
+[2026-11-09T18:21:26.998Z]   ...
+[2026-11-09T18:21:26.998Z] # Subtest: pixel, line and page wheel units normalize consistently
+[2026-11-09T18:21:26.998Z] ok 12 - pixel, line and page wheel units normalize consistently
+[2026-11-09T18:21:26.998Z]   ---
+[2026-11-09T18:21:26.998Z]   duration_ms: 0.194034
+[2026-11-09T18:21:26.999Z]   type: 'test'
+[2026-11-09T18:21:26.999Z]   ...
+[2026-11-09T18:21:26.999Z] # Subtest: finishing an inner text scroll does not advance on its remaining momentum
+[2026-11-09T18:21:26.999Z] ok 13 - finishing an inner text scroll does not advance on its remaining momentum
+[2026-11-09T18:21:26.999Z]   ---
+[2026-11-09T18:21:26.999Z]   duration_ms: 0.083602
+[2026-11-09T18:21:26.999Z]   type: 'test'
+[2026-11-09T18:21:26.999Z]   ...
+[2026-11-09T18:21:26.999Z] # Subtest: content stepping stops at the ends instead of changing routes or wrapping
+[2026-11-09T18:21:26.999Z] ok 14 - content stepping stops at the ends instead of changing routes or wrapping
+[2026-11-09T18:21:26.999Z]   ---
+[2026-11-09T18:21:26.999Z]   duration_ms: 0.28002
+[2026-11-09T18:21:26.999Z]   type: 'test'
+[2026-11-09T18:21:26.999Z]   ...
+[2026-11-09T18:21:26.999Z] 1..14
+[2026-11-09T18:21:26.999Z] # tests 14
+[2026-11-09T18:21:26.999Z] # suites 0
+[2026-11-09T18:21:26.999Z] # pass 14
+[2026-11-09T18:21:26.999Z] # fail 0
+[2026-11-09T18:21:26.999Z] # cancelled 0
+[2026-11-09T18:21:26.999Z] # skipped 0
+[2026-11-09T18:21:26.999Z] # todo 0
+[2026-11-09T18:21:26.999Z] # duration_ms 52.301519
+[2026-11-09T18:21:26.999Z] + npm run build:pages
+[2026-11-09T18:21:27.250Z] 
+[2026-11-09T18:21:27.251Z] > build:pages
+[2026-11-09T18:21:27.251Z] > node scripts/build-h5x.mjs --pages
+[2026-11-09T18:21:27.251Z] 
+[2026-11-09T18:21:27.251Z] Built five H5X pages in /var/jenkins_home/workspace/H5X-DevOps/out using the researched local snapshot.
+[2026-11-09T18:21:27.251Z] + npm run check:site
+[2026-11-09T18:21:27.251Z] 
+[2026-11-09T18:21:27.252Z] > check:site
+[2026-11-09T18:21:27.252Z] > node scripts/check-site.mjs
+[2026-11-09T18:21:27.252Z] 
+[2026-11-09T18:21:27.252Z] Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker image)
+[Pipeline] sh
+[2026-11-09T18:21:27.611Z] + docker build --progress=plain -t h5x-devops:build-2 .
+[2026-11-09T18:21:27.862Z] #0 building with "default" instance using docker driver
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #1 [internal] load build definition from Dockerfile
+[2026-11-09T18:21:27.862Z] #1 transferring dockerfile: 613B done
+[2026-11-09T18:21:27.862Z] #1 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #2 [internal] load metadata for docker.io/library/node:22-alpine
+[2026-11-09T18:21:27.862Z] #2 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #3 [internal] load metadata for docker.io/nginxinc/nginx-unprivileged:stable-alpine
+[2026-11-09T18:21:27.862Z] #3 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #4 [internal] load .dockerignore
+[2026-11-09T18:21:27.862Z] #4 transferring context: 152B done
+[2026-11-09T18:21:27.862Z] #4 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #5 [internal] load build context
+[2026-11-09T18:21:27.862Z] #5 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #6 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+[2026-11-09T18:21:27.862Z] #6 resolve docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03 0.0s done
+[2026-11-09T18:21:27.862Z] #6 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #7 [build 1/8] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+[2026-11-09T18:21:27.862Z] #7 resolve docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+[2026-11-09T18:21:27.862Z] #7 DONE 0.0s
+[2026-11-09T18:21:27.862Z] 
+[2026-11-09T18:21:27.862Z] #5 [internal] load build context
+[2026-11-09T18:21:27.862Z] #5 transferring context: 1.46MB 0.1s done
+[2026-11-09T18:21:28.113Z] #5 DONE 0.1s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #8 [build 2/8] WORKDIR /app
+[2026-11-09T18:21:28.113Z] #8 CACHED
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #6 [stage-1 1/3] FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+[2026-11-09T18:21:28.113Z] #6 CACHED
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #9 [build 3/8] COPY package.json ./
+[2026-11-09T18:21:28.113Z] #9 DONE 0.0s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #10 [stage-1 2/3] COPY devops/nginx.conf /etc/nginx/conf.d/default.conf
+[2026-11-09T18:21:28.113Z] #10 DONE 0.0s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #11 [build 4/8] COPY scripts/ ./scripts/
+[2026-11-09T18:21:28.113Z] #11 DONE 0.0s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #12 [build 5/8] COPY src/ ./src/
+[2026-11-09T18:21:28.113Z] #12 DONE 0.0s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #13 [build 6/8] COPY static/ ./static/
+[2026-11-09T18:21:28.113Z] #13 DONE 0.0s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #14 [build 7/8] COPY data/ ./data/
+[2026-11-09T18:21:28.113Z] #14 DONE 0.0s
+[2026-11-09T18:21:28.113Z] 
+[2026-11-09T18:21:28.113Z] #15 [build 8/8] RUN npm run build:pages && npm run check:site
+[2026-11-09T18:21:28.664Z] #15 0.621 
+[2026-11-09T18:21:28.665Z] #15 0.621 > build:pages
+[2026-11-09T18:21:28.665Z] #15 0.621 > node scripts/build-h5x.mjs --pages
+[2026-11-09T18:21:28.665Z] #15 0.621 
+[2026-11-09T18:21:28.915Z] #15 0.764 Built five H5X pages in /app/out using the researched local snapshot.
+[2026-11-09T18:21:28.915Z] #15 0.899 
+[2026-11-09T18:21:28.915Z] #15 0.899 > check:site
+[2026-11-09T18:21:28.915Z] #15 0.899 > node scripts/check-site.mjs
+[2026-11-09T18:21:28.915Z] #15 0.899 
+[2026-11-09T18:21:29.166Z] #15 0.962 Five pages, project-relative assets, H5X identity, valid records and gallery exclusions verified.
+[2026-11-09T18:21:29.166Z] #15 DONE 1.0s
+[2026-11-09T18:21:29.166Z] 
+[2026-11-09T18:21:29.166Z] #16 [stage-1 3/3] COPY --from=build /app/out/ /usr/share/nginx/html/
+[2026-11-09T18:21:29.166Z] #16 DONE 0.1s
+[2026-11-09T18:21:29.166Z] 
+[2026-11-09T18:21:29.166Z] #17 exporting to image
+[2026-11-09T18:21:29.166Z] #17 exporting layers 0.1s done
+[2026-11-09T18:21:29.417Z] #17 exporting manifest sha256:999f37d91df4b93c8f984feedd2f73ebac10f499fc9c4b4c84f8a9c30fa402ec 0.0s done
+[2026-11-09T18:21:29.417Z] #17 exporting config sha256:6baf5cff736347c4597a2cd0874920bbf135c5628eef8c1767d387b6ca2cb811 0.0s done
+[2026-11-09T18:21:29.417Z] #17 exporting attestation manifest sha256:3686d2ac8eef95996686b4087a7d44596026397c52b0f248dc64b834fbe9db8c 0.0s done
+[2026-11-09T18:21:29.417Z] #17 exporting manifest list sha256:ae8a687c782c2c94068182697dac383f9dcb2a01dfec6ab847cd7afef6a6a8b1 0.0s done
+[2026-11-09T18:21:29.417Z] #17 naming to docker.io/library/h5x-devops:build-2 done
+[2026-11-09T18:21:29.417Z] #17 unpacking to docker.io/library/h5x-devops:build-2 0.0s done
+[2026-11-09T18:21:29.671Z] #17 DONE 0.3s
+[Pipeline] sh
+[2026-11-09T18:21:29.960Z] + docker image inspect h5x-devops:build-2 --format=Image={{.Id}} User={{.Config.User}}
+[2026-11-09T18:21:29.960Z] Image=sha256:ae8a687c782c2c94068182697dac383f9dcb2a01dfec6ab847cd7afef6a6a8b1 User=101
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Selenium acceptance)
+[Pipeline] sh
+[2026-11-09T18:21:30.310Z] + docker run -d --name h5x-test-2 --network kind h5x-devops:build-2
+[2026-11-09T18:21:30.310Z] 5792029500b1e31059ffcbbd5048bcee270bfa1dca876c10d92d3864ab3bc245
+[2026-11-09T18:21:30.310Z] + export BASE_URL=http://h5x-test-2:8080
+[2026-11-09T18:21:30.310Z] + /opt/browser-tests/bin/python -m pytest tests/selenium -v -s --junitxml=reports/selenium/junit.xml
+[2026-11-09T18:21:30.561Z] ============================= test session starts ==============================
+[2026-11-09T18:21:30.561Z] platform linux -- Python 3.13.5, pytest-8.4.2, pluggy-1.7.0 -- /opt/browser-tests/bin/python
+[2026-11-09T18:21:30.561Z] cachedir: .pytest_cache
+[2026-11-09T18:21:30.561Z] rootdir: /var/jenkins_home/workspace/H5X-DevOps
+[2026-11-09T18:21:30.561Z] collecting ... collected 8 items
+[2026-11-09T18:21:30.561Z] 
+[2026-11-09T18:21:32.157Z] tests/selenium/test_website.py::test_navigation[index.html-ctf-CTF TEAM] PASSED
+[2026-11-09T18:21:33.069Z] tests/selenium/test_website.py::test_navigation[bug-hunt.html-bugs-BUG HUNT] PASSED
+[2026-11-09T18:21:33.871Z] tests/selenium/test_website.py::test_navigation[hackathon.html-hackathon-HACKATHON] PASSED
+[2026-11-09T18:21:34.673Z] tests/selenium/test_website.py::test_navigation[events.html-events-EVENTS ATTENDED] PASSED
+[2026-11-09T18:21:35.475Z] tests/selenium/test_website.py::test_navigation[gallery.html-gallery-GALLERY] PASSED
+[2026-11-09T18:21:36.386Z] tests/selenium/test_website.py::test_theme_persists_after_reload PASSED
+[2026-11-09T18:21:37.731Z] tests/selenium/test_website.py::test_gallery_selection_and_dialog PASSED
+[2026-11-09T18:21:38.533Z] tests/selenium/test_website.py::test_motion_pause_persists PASSED
+[2026-11-09T18:21:38.533Z] 
+[2026-11-09T18:21:38.533Z] - generated xml file: /var/jenkins_home/workspace/H5X-DevOps/reports/selenium/junit.xml -
+[2026-11-09T18:21:38.533Z] ============================== 8 passed in 8.00s ===============================
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Kubernetes deploy)
+[Pipeline] sh
+[2026-11-09T18:21:38.903Z] + kind load docker-image h5x-devops:build-2 --name h5x-devops
+[2026-11-09T18:21:39.154Z] Image: "h5x-devops:build-2" with ID "sha256:ae8a687c782c2c94068182697dac383f9dcb2a01dfec6ab847cd7afef6a6a8b1" not yet present on node "h5x-devops-control-plane", loading...
+[2026-11-09T18:21:42.384Z] + mkdir -p reports/manifests
+[2026-11-09T18:21:42.384Z] + kubectl kustomize k8s
+[2026-11-09T18:21:42.384Z] + sed -i s|h5x-devops:local|h5x-devops:build-2|g reports/manifests/deployment.yaml
+[2026-11-09T18:21:42.384Z] + kubectl --context kind-h5x-devops apply -f reports/manifests/deployment.yaml
+[2026-11-09T18:21:42.635Z] namespace/h5x-devops created
+[2026-11-09T18:21:42.635Z] service/h5x created
+[2026-11-09T18:21:42.635Z] deployment.apps/h5x created
+[2026-11-09T18:21:42.635Z] + kubectl --context kind-h5x-devops -n h5x-devops rollout status deployment/h5x --timeout=120s
+[2026-11-09T18:21:42.635Z] Waiting for deployment "h5x" rollout to finish: 0 out of 2 new replicas have been updated...
+[2026-11-09T18:21:42.635Z] Waiting for deployment "h5x" rollout to finish: 0 of 2 updated replicas are available...
+[2026-11-09T18:21:46.761Z] Waiting for deployment "h5x" rollout to finish: 1 of 2 updated replicas are available...
+[2026-11-09T18:21:46.761Z] deployment "h5x" successfully rolled out
+[2026-11-09T18:21:46.761Z] + kubectl --context kind-h5x-devops -n h5x-devops get deployments,pods,services -o wide
+[2026-11-09T18:21:47.012Z] NAME                  READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES               SELECTOR
+[2026-11-09T18:21:47.012Z] deployment.apps/h5x   2/2     2            2           4s    website      h5x-devops:build-2   app=h5x
+[2026-11-09T18:21:47.012Z] 
+[2026-11-09T18:21:47.012Z] NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                       NOMINATED NODE   READINESS GATES
+[2026-11-09T18:21:47.012Z] pod/h5x-648b67cc75-br7tp   1/1     Running   0          4s    10.244.0.6   h5x-devops-control-plane   <none>           <none>
+[2026-11-09T18:21:47.012Z] pod/h5x-648b67cc75-f8bl8   1/1     Running   0          4s    10.244.0.5   h5x-devops-control-plane   <none>           <none>
+[2026-11-09T18:21:47.012Z] 
+[2026-11-09T18:21:47.012Z] NAME          TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+[2026-11-09T18:21:47.012Z] service/h5x   NodePort   10.96.217.19   <none>        80:30080/TCP   4s    app=h5x
+[2026-11-09T18:21:47.012Z] + curl --fail --retry 12 --retry-delay 2 --retry-all-errors http://h5x-devops-control-plane:30080/healthz
+[2026-11-09T18:21:47.012Z]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2026-11-09T18:21:47.012Z]                                  Dload  Upload   Total   Spent    Left  Speed
+[2026-11-09T18:21:47.012Z] [2026-11-09T18:21:47.012Z]   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[2026-11-09T18:21:47.012Z] 100     8  100     8    0     0   7005      0 --:--:-- --:--:-- --:--:--  8000
+[2026-11-09T18:21:47.012Z] healthy
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] junit
+[2026-11-09T18:21:47.138Z] Recording test results
+[2026-11-09T18:21:47.219Z] [Checks API] No suitable checks publisher found.
+[Pipeline] archiveArtifacts
+[2026-11-09T18:21:47.237Z] Archiving artifacts
+[Pipeline] sh
+[2026-11-09T18:21:47.524Z] + docker rm -f h5x-test-2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
