@@ -3,3 +3,5 @@
 *.js text eol=lf
 *.yml text eol=lf
 *.cmd text eol=crlf
+# Preserve captured evidence byte-for-byte, including original line endings.
+devops/evidence/** -text -whitespace
