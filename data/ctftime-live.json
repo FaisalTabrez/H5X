@@ -214,6 +214,16 @@
       "participants": 287,
       "time": 1793412000,
       "url": "https://ctftime.org/event/3459/"
+    },
+    {
+      "id": 3331,
+      "title": "PINK+ CTF 2026",
+      "year": 2026,
+      "place": 59,
+      "points": 1435,
+      "participants": 589,
+      "time": 1793966400,
+      "url": "https://ctftime.org/event/3331/"
     }
   ],
   "seasons": [
@@ -222,9 +232,9 @@
       "world": 137,
       "india": 12,
       "points": 351.299403845,
-      "events": 21
+      "events": 22
     }
   ],
-  "fetchedAt": "2026-11-10T22:34:34.944Z",
-  "revision": "30be46fd6fdbcef2"
+  "fetchedAt": "2026-11-11T02:14:14.573Z",
+  "revision": "7e920a65cfe1b7bd"
 }
