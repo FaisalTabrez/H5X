@@ -176,6 +176,16 @@
       "url": "https://ctftime.org/event/3369/"
     },
     {
+      "id": 3340,
+      "title": "HITCON CTF 2026",
+      "year": 2026,
+      "place": 31,
+      "points": 4080,
+      "participants": 754,
+      "time": 1792764000,
+      "url": "https://ctftime.org/event/3340/"
+    },
+    {
       "id": 3377,
       "title": "RSTCON 2026 CTF",
       "year": 2026,
@@ -229,12 +239,12 @@
   "seasons": [
     {
       "year": 2026,
-      "world": 137,
-      "india": 12,
-      "points": 351.299403845,
-      "events": 22
+      "world": 111,
+      "india": 9,
+      "points": 393.986568118,
+      "events": 23
     }
   ],
-  "fetchedAt": "2026-11-13T08:49:31.497Z",
-  "revision": "7e920a65cfe1b7bd"
+  "fetchedAt": "2026-11-13T22:15:18.145Z",
+  "revision": "3aab721ed72e4a4e"
 }
