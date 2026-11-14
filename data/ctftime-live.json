@@ -234,17 +234,27 @@
       "participants": 589,
       "time": 1793966400,
       "url": "https://ctftime.org/event/3331/"
+    },
+    {
+      "id": 3082,
+      "title": "Platypwn 2026",
+      "year": 2026,
+      "place": 77,
+      "points": 2284,
+      "participants": 202,
+      "time": 1794589200,
+      "url": "https://ctftime.org/event/3082/"
     }
   ],
   "seasons": [
     {
       "year": 2026,
-      "world": 111,
+      "world": 112,
       "india": 9,
       "points": 393.986568118,
-      "events": 23
+      "events": 24
     }
   ],
-  "fetchedAt": "2026-11-13T22:15:18.145Z",
-  "revision": "3aab721ed72e4a4e"
+  "fetchedAt": "2026-11-14T15:55:05.051Z",
+  "revision": "b2538e89fb0793f6"
 }
