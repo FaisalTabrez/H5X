@@ -244,6 +244,16 @@
       "participants": 202,
       "time": 1794589200,
       "url": "https://ctftime.org/event/3082/"
+    },
+    {
+      "id": 3464,
+      "title": "h4ckc0n 2026",
+      "year": 2026,
+      "place": 117,
+      "points": 3300,
+      "participants": 627,
+      "time": 1794670200,
+      "url": "https://ctftime.org/event/3464/"
     }
   ],
   "seasons": [
@@ -252,9 +262,9 @@
       "world": 112,
       "india": 9,
       "points": 393.986568118,
-      "events": 24
+      "events": 25
     }
   ],
-  "fetchedAt": "2026-11-15T20:03:38.961Z",
-  "revision": "b2538e89fb0793f6"
+  "fetchedAt": "2026-11-16T16:06:27.940Z",
+  "revision": "f4db0396a19cae14"
 }
