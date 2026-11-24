@@ -254,17 +254,27 @@
       "participants": 627,
       "time": 1794670200,
       "url": "https://ctftime.org/event/3464/"
+    },
+    {
+      "id": 3337,
+      "title": "GlacierCTF 2026",
+      "year": 2026,
+      "place": 268,
+      "points": 350,
+      "participants": 502,
+      "time": 1795197600,
+      "url": "https://ctftime.org/event/3337/"
     }
   ],
   "seasons": [
     {
       "year": 2026,
-      "world": 113,
-      "india": 9,
+      "world": 121,
+      "india": 10,
       "points": 393.986568118,
-      "events": 25
+      "events": 26
     }
   ],
-  "fetchedAt": "2026-11-24T00:04:12.172Z",
-  "revision": "de351fe8b89541e1"
+  "fetchedAt": "2026-11-24T20:23:27.421Z",
+  "revision": "a086cd944fb95c9d"
 }
